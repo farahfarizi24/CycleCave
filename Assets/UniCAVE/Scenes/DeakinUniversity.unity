@@ -1886,7 +1886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &275324917
 Transform:
   m_ObjectHideFlags: 0
@@ -2402,12 +2402,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359513621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -14.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6300001, y: 0.56, z: -2.1699996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1532935590}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375239326
 GameObject:
@@ -13628,7 +13628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532935602}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.00000014901161, y: 0.0000002384186, z: -2.842171e-14}
   m_LocalScale: {x: 0.34399983, y: 0, z: 0.19999985}
   m_Children: []
   m_Father: {fileID: 4588754342903705233}
@@ -13642,11 +13642,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532935565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.31, y: 0, z: -4.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4589234272955031225}
   - {fileID: 869008964}
+  - {fileID: 359513624}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13710,7 +13711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532935567}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0000002086163, y: 0, z: -0.00000011920926}
   m_LocalScale: {x: 0.3489999, y: 0, z: 0.21999992}
   m_Children: []
   m_Father: {fileID: 4589239724218966253}
@@ -13836,7 +13837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532935611}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: -0.000000042146848, z: 0.00000004214685}
+  m_LocalPosition: {x: -0.00000014901161, y: -0.00000021073424, z: 0.00000021073424}
   m_LocalScale: {x: 0.34399992, y: 0, z: 0.07899997}
   m_Children: []
   m_Father: {fileID: 1532935595}
@@ -13887,7 +13888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532935614}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.00000014901161, y: 0, z: 0.00000023841858}
   m_LocalScale: {x: 0.34399992, y: 0, z: 0.21999994}
   m_Children: []
   m_Father: {fileID: 4589147403681313859}
@@ -16495,7 +16496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862388079}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.4210855e-14, y: 0, z: 0.0000001192093}
   m_LocalScale: {x: 0.3489999, y: 0, z: 0.21999992}
   m_Children: []
   m_Father: {fileID: 542550629}
@@ -17240,6 +17241,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971876267}
   m_Mesh: {fileID: 4300000, guid: 5fe38933f5a0c3f4bb1dca1605a2dca1, type: 3}
+--- !u!1001 &1975266886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_Name
+      value: KC15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400144, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca4d73b2d30a50445b980704206354ac, type: 3}
 --- !u!1 &1980932492
 GameObject:
   m_ObjectHideFlags: 0
@@ -19385,9 +19443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 4478438741442478155}
-  launchScript: "# Windows Powershell Launch Script\n# Script Generated On August
-    9, 2022, 4:11:59 PM\n# Setup contains 5 displays and 0 display managers\n\n# Display:
-    Front Wall\nIf ($env:ComputerName -eq '01-DK-FRONT') {\n\t& '.\\UniCAVE2018.exe'
+  launchScript: "# Windows Powershell Launch Script\n# Script Generated On Thursday,
+    31 October 2024, 10:21:38 AM\n# Setup contains 5 displays and 0 display managers\n\n#
+    Display: Front Wall\nIf ($env:ComputerName -eq '01-DK-FRONT') {\n\t& '.\\UniCAVE2018.exe'
     -screen-fullscreen 0 -popupwindow -vrmode stereo\n}\n\n# Display: Left Wall\nIf
     ($env:ComputerName -eq '03-DK-LEFT') {\n\t& '.\\UniCAVE2018.exe' -screen-fullscreen
     0 -popupwindow -vrmode stereo\n}\n\n# Display: Right\nIf ($env:ComputerName -eq
