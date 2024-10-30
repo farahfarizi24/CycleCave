@@ -56,6 +56,9 @@ ExportedObj/
 *.jpg
 *.png
 *.asset
+*.sharedassets0.assets
+*.sharedassets0.assets.resS
+*.max
 
 
 # Unity3D generated file on crash reports
