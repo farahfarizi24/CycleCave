@@ -1,8 +1,28 @@
 # Windows Powershell Launch Script
-# Script Generated On October 1, 2019, 2:28:50 PM
-# Setup contains 4 displays and 1 display managers
+# Script Generated On Thursday, 31 October 2024, 10:43:34 AM
+# Setup contains 5 displays and 0 display managers
 
-# Display Group: Displays
-If ($env:ComputerName -eq 'OLIPC') {
-	& '.\UniCAVE2018.exe' -screen-fullscreen 1 -adapter 0 -screen-width 5120 -screen-height 720 -vrmode stereo
+# Display: Front Wall
+If ($env:ComputerName -eq '01-DK-FRONT') {
+	& '.\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo
+}
+
+# Display: Left Wall
+If ($env:ComputerName -eq '03-DK-LEFT') {
+	& '.\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo
+}
+
+# Display: Right
+If ($env:ComputerName -eq '04-DK-RIGHT') {
+	& '.\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo
+}
+
+# Display: FloorLeft
+If ($env:ComputerName -eq '05-DK-FLOOR') {
+	& '.\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo
+}
+
+# Display: Roof
+If ($env:ComputerName -eq '02-DK-ROOF') {
+	& '.\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo
 }

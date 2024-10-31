@@ -19444,7 +19444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 4478438741442478155}
   launchScript: "# Windows Powershell Launch Script\n# Script Generated On Thursday,
-    31 October 2024, 10:21:38 AM\n# Setup contains 5 displays and 0 display managers\n\n#
+    31 October 2024, 10:43:01 AM\n# Setup contains 5 displays and 0 display managers\n\n#
     Display: Front Wall\nIf ($env:ComputerName -eq '01-DK-FRONT') {\n\t& '.\\UniCAVE2018.exe'
     -screen-fullscreen 0 -popupwindow -vrmode stereo\n}\n\n# Display: Left Wall\nIf
     ($env:ComputerName -eq '03-DK-LEFT') {\n\t& '.\\UniCAVE2018.exe' -screen-fullscreen
