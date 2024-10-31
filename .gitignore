@@ -55,14 +55,6 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
-*.FBX
-*.mp4
-*.jpg
-*.png
-*.asset
-*.sharedassets0.assets
-*.sharedassets0.assets.resS
-*.max
 
 
 # Unity3D generated file on crash reports
