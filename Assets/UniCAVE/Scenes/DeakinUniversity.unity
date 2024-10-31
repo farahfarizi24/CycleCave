@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13e67f763fb5bc41ad34dfb8dc3d0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 4592086222889635374}
   machineName: 04-DK-RIGHT
   width: 3.49
   height: 2.2
@@ -14039,7 +14039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13e67f763fb5bc41ad34dfb8dc3d0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 4592086222889635374}
   machineName: 02-DK-ROOF
   width: 3.44
   height: 0.79
@@ -19174,8 +19174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b8c4f7ddc62bb49af7d4bf89c27c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackerAddress: Wand@localhost
-  channel: 0
+  trackerAddress: DTrack@localhost
+  channel: 1
   trackPosition: 1
   trackRotation: 1
   trackerPositionOffset: {x: 0, y: 0, z: 0}
@@ -19194,7 +19194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13e67f763fb5bc41ad34dfb8dc3d0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 4592086222889635374}
   machineName: 05-DK-FLOOR
   width: 3.44
   height: 2
@@ -19237,7 +19237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13e67f763fb5bc41ad34dfb8dc3d0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 4592086222889635374}
   machineName: 03-DK-LEFT
   width: 3.49
   height: 2.2
@@ -19280,7 +19280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b8c4f7ddc62bb49af7d4bf89c27c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackerAddress: Glasses@localhost
+  trackerAddress: DTrack@localhost
   channel: 0
   trackPosition: 1
   trackRotation: 1
@@ -19366,7 +19366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13e67f763fb5bc41ad34dfb8dc3d0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 4592086222889635374}
   machineName: 01-DK-FRONT
   width: 3.44
   height: 2.2
@@ -19444,16 +19444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 4478438741442478155}
   launchScript: "# Windows Powershell Launch Script\n# Script Generated On Thursday,
-    31 October 2024, 10:43:01 AM\n# Setup contains 5 displays and 0 display managers\n\n#
-    Display: Front Wall\nIf ($env:ComputerName -eq '01-DK-FRONT') {\n\t& '.\\UniCAVE2018.exe'
-    -screen-fullscreen 0 -popupwindow -vrmode stereo\n}\n\n# Display: Left Wall\nIf
-    ($env:ComputerName -eq '03-DK-LEFT') {\n\t& '.\\UniCAVE2018.exe' -screen-fullscreen
-    0 -popupwindow -vrmode stereo\n}\n\n# Display: Right\nIf ($env:ComputerName -eq
-    '04-DK-RIGHT') {\n\t& '.\\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode
-    stereo\n}\n\n# Display: FloorLeft\nIf ($env:ComputerName -eq '05-DK-FLOOR') {\n\t&
-    '.\\UniCAVE2018.exe' -screen-fullscreen 0 -popupwindow -vrmode stereo\n}\n\n#
-    Display: Roof\nIf ($env:ComputerName -eq '02-DK-ROOF') {\n\t& '.\\UniCAVE2018.exe'
-    -screen-fullscreen 0 -popupwindow -vrmode stereo\n}"
+    31 October 2024, 1:03:52 PM\n# Setup contains 5 displays and 1 display managers\n\n#
+    Display Group: Displays\nIf ($env:ComputerName -eq '06-DK-MA') {\n\t& '.\\UniCAVE2018.exe'
+    -screen-fullscreen 1 -adapter 2 -screen-width 0 -screen-height 0 -vrmode stereo\n}"
   settingsToLoad: 
 --- !u!4 &4588749825168911399
 Transform:
@@ -19595,6 +19588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4588749825168911399}
+  - component: {fileID: 4592086222889635374}
   m_Layer: 0
   m_Name: Displays
   m_TagString: Untagged
@@ -19602,6 +19596,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4592086222889635374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592086222889635373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05501df480c7c4ebb908efc8fa9df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineName: 06-DK-MA
+  displayNumber: 2
+  displayResolution: {x: 0, y: 0}
+  displays:
+  - {fileID: 4479754048630947437}
+  - {fileID: 4479084355931347741}
+  - {fileID: 542550631}
+  - {fileID: 4478470642126049939}
+  - {fileID: 1532935656}
 --- !u!1 &4592088792641611879
 GameObject:
   m_ObjectHideFlags: 0
