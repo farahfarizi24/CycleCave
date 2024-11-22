@@ -19444,7 +19444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 4478438741442478155}
   launchScript: "# Windows Powershell Launch Script\n# Script Generated On Thursday,
-    31 October 2024, 1:03:52 PM\n# Setup contains 5 displays and 1 display managers\n\n#
+    31 October 2024, 1:57:56 PM\n# Setup contains 5 displays and 1 display managers\n\n#
     Display Group: Displays\nIf ($env:ComputerName -eq '06-DK-MA') {\n\t& '.\\UniCAVE2018.exe'
     -screen-fullscreen 1 -adapter 2 -screen-width 0 -screen-height 0 -vrmode stereo\n}"
   settingsToLoad: 

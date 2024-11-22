@@ -1,1 +1,0 @@
-psexec \\BATIMATEC -u "devs@arcane-technologies.com" -p "ATbsvs8982" cmd /c copy .\truc.txt \\BATIMATEC\Users\ArcaneVR\Documents\testOut\

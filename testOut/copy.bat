@@ -1,2 +1,0 @@
-copy /y \\GBRINCINARCANE\UniCAVE2018\testOut\UniCAVE2018.exe \\BATIMATEC\c$\
-pause
