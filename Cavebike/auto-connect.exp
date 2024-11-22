@@ -33,6 +33,11 @@ while {$connection_established != 1} {
             expect -re $prompt
             send "connect $TARGET_ADDRESS\r"
         }
+        # retry connect if hit unusual error
+        -re "le-connection-abort-by-local" {
+            expect -re $prompt
+            send "connect $TARGET_ADDRESS\r"
+        }
         # if hit device not available - scan to discover the device and continue
         -re "not available" {
 
