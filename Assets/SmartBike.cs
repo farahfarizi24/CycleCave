@@ -15,7 +15,7 @@ private UdpClient udpClient;
     private Thread receiveThread;
     private string receivedData;
 
-    //private string serverIP = ""; //Match with main computer IP, similar at the Python file used for bike   
+    private string serverIP = "127.0.0.1"; //Match with main computer IP, similar at the Python file used for bike   
     private int serverPort = 5005; //Match Python's Server port
     private bool isReceiving = true;
 
