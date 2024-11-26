@@ -5,7 +5,6 @@ using System.Net.Sockets;
 using UnityEngine;
 using System.Threading;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class SmartBike : MonoBehaviour
 {
@@ -40,52 +39,56 @@ private UdpClient udpClient;
         receiveThread.Start();
 
     }
-    void ReceiveData(){
-        try{
-            while (isReceiving){
-                //Receive data from server
-                byte[] data = udpClient.Receive(ref remoteEndPoint); //Blocks until data is received
-                string message = Encoding.UTF8.GetString(data);
+void ReceiveData(){
+    try{
+        while (isReceiving){
+            // Receive data from server
+            byte[] data = udpClient.Receive(ref remoteEndPoint); // Blocks until data is received
+            string message = Encoding.UTF8.GetString(data);
 
-                //Log received data
-                Debug.Log("Received: " + message);
+            // Log received data
+            Debug.Log("Received: " + message);
 
-                // Deserialize JSON data
-                DataPayload payload = JsonUtility.FromJson<DataPayload>(message);
+            // Deserialize JSON data
+            DataPayload payload = JsonUtility.FromJson<DataPayload>(message);
 
-                if (payload != null)
+            if (payload != null)
+            {
+                // Updating data
+                speed = payload.speed;
+                cadence = payload.cadence;
+                power = payload.power;
+                Debug.Log($"Updated speed: {speed}, Cadence: {cadence}, Power: {power}");
+
+                // Creating new log entries
+                logCounter++;
+                LogEntry newLog = new LogEntry
                 {
-                    //Updating data
-                    speed = payload.speed;
-                    cadence = payload.cadence;
-                    power = payload.power;
-                    Debug.Log($"Updated speed: {speed}, Cadence: {cadence}, Power: {power}");
+                    logID = logCounter,
+                    speed = payload.speed,
+                    cadence = payload.cadence,
+                    power = payload.power,
+                    timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                };
 
-                    //Creating new log entries
-                    // logCounter++;
-                    // LogEntry newLog = new LogEntry
-                    // {
-                    //     logID = logCounter,
-                    //     speed = payload.speed,
-                    //     cadence = payload.cadence,
-                    //     power = payload.power,
-                    //     timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-                    // };
+                // Add LogEntry to data collection
+                dataLog.Add(newLog);
 
-                    // //Add LogEntry to data collection
-                    // dataLog.Add(newLog);
-                }
-                else
-                {
-                    Debug.LogError("Failed to deserialize payload.");
-                }
+                // Save the log data to file
+                SaveDataToFile(newLog);
+            }
+            else
+            {
+                Debug.LogError("Failed to deserialize payload.");
             }
         }
-        catch (Exception e)
-        {
-            Debug.LogError("Error receiving data: " + e.Message);
-        }
     }
+    catch (Exception e)
+    {
+        Debug.LogError("Error receiving data: " + e.Message);
+    }
+}
+
 
     //Moving the cameras along
     // void Update(){
@@ -97,11 +100,25 @@ private UdpClient udpClient;
         
     // }
 
-    // void SaveDataToFile(LogEntry log){
-    //             string filePath = "bikeDataLog.txt";
-    //     string logText = $"{log.logID}, {log.speed}, {log.cadence}, {log.power}, {log.timestamp}\n";
-    //     System.IO.File.AppendAllText(filePath, logText);
-    // }
+void SaveDataToFile(LogEntry log){
+    string filePath = "bikeDataLog.txt";
+
+    // Check if the file already exists
+    bool fileExists = System.IO.File.Exists(filePath);
+
+    // If the file doesn't exist, write the headers first
+    if (!fileExists)
+    {
+        string headerText = "LogID, Speed, Cadence, Power, Timestamp\n";  // Define the headers
+        System.IO.File.WriteAllText(filePath, headerText);  // Write headers to file
+    }
+
+    // Append the log entry data
+    string logText = $"{log.logID}, {log.speed}, {log.cadence}, {log.power}, {log.timestamp}\n";
+    System.IO.File.AppendAllText(filePath, logText);
+
+    Debug.Log("Log saved to: " + filePath);
+}
 
     void OnApplicationQuit()
     {
