@@ -26,9 +26,19 @@ private UdpClient udpClient;
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
     private int logCounter = 0;
+    private string sessionFilePath; //Stores unique file path per session
 
     void Start()
     {
+        //Generate file for this session
+        string sessionTimestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        sessionFilePath = $"bikeDataLog_{sessionTimestamp}.csv";
+        Debug.Log("New session file: " + sessionFilePath);
+
+        //Initialize headers for file
+        string headerText = "LogID, Speed, Cadence, Power, Timestamp\n";
+        System.IO.File.WriteAllText(sessionFilePath, headerText); 
+
         //Set up UDP client
         udpClient = new UdpClient(serverPort);
         remoteEndPoint = new IPEndPoint(IPAddress.Parse(serverIP), serverPort);
@@ -60,7 +70,8 @@ void ReceiveData(){
                 power = payload.power;
                 Debug.Log($"Updated speed: {speed}, Cadence: {cadence}, Power: {power}");
 
-                // Creating new log entries
+                // Creating new log entries - Resets every session, but in same file. Should it be different file per
+                //session, or...?
                 logCounter++;
                 LogEntry newLog = new LogEntry
                 {
@@ -101,23 +112,11 @@ void ReceiveData(){
     // }
 
 void SaveDataToFile(LogEntry log){
-    string filePath = "bikeDataLog.txt";
-
-    // Check if the file already exists
-    bool fileExists = System.IO.File.Exists(filePath);
-
-    // If the file doesn't exist, write the headers first
-    if (!fileExists)
-    {
-        string headerText = "LogID, Speed, Cadence, Power, Timestamp\n";  // Define the headers
-        System.IO.File.WriteAllText(filePath, headerText);  // Write headers to file
-    }
-
     // Append the log entry data
     string logText = $"{log.logID}, {log.speed}, {log.cadence}, {log.power}, {log.timestamp}\n";
-    System.IO.File.AppendAllText(filePath, logText);
+    System.IO.File.AppendAllText(sessionFilePath, logText);
 
-    Debug.Log("Log saved to: " + filePath);
+    Debug.Log("Log saved to: " + sessionFilePath);
 }
 
     void OnApplicationQuit()
@@ -128,8 +127,8 @@ void SaveDataToFile(LogEntry log){
     }
 
 
-    // Used for JsonUtility
-    [Serializable]
+    // Used for receiving data from bike
+    [System.Serializable]
     public class DataPayload
     {
         public float speed;
@@ -138,7 +137,7 @@ void SaveDataToFile(LogEntry log){
     }
 
     //Used for data collection log entry
-    [Serializable]
+    [System.Serializable]
     public class LogEntry{
         public int logID;
         public float speed;
