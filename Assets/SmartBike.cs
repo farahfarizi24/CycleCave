@@ -14,7 +14,7 @@ private UdpClient udpClient;
     private Thread receiveThread;
     private string receivedData;
 
-    private string serverIP = "127.0.0.1"; //Match with main computer IP, similar at the Python file used for bike   
+    private string serverIP = "10.148.112.66"; //Match with main computer IP, similar at the Python file used for bike   
     private int serverPort = 5005; //Match Python's Server port
     private bool isReceiving = true;
 
@@ -102,14 +102,14 @@ void ReceiveData(){
 
 
     //Moving the cameras along
-    // void Update(){
-    //     //Using speed to use transform.position to move along with the bike
-    //     var step = Time.deltaTime * speed;
+    void Update(){
+        //Using speed to use transform.position to move along with the bike
+        var step = Time.deltaTime * speed;
 
-    //     //moving forward for now, according to value
-    //     transform.position += transform.forward * step;
+        //moving forward for now, according to value
+        transform.position += transform.forward * step;
         
-    // }
+    }
 
 void SaveDataToFile(LogEntry log){
     // Append the log entry data
