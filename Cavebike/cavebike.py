@@ -28,8 +28,10 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 sys.excepthook = handle_exception
 
 # define IP & Port
-IP = '10.141.12.184' #'10.148.112.66'
-PORT = 5005
+#IP = '10.148.112.66' # PC's
+#IP = '10.141.12.184' # D's
+IP = '10.141.44.235' # E's
+PORT = 1567 #5005
 
 # constants
 KICKR_ADDRESS = 'd2:83:84:53:44:47'
@@ -100,7 +102,7 @@ class Cavebike(gatt.Device):
             'power' : power
         })
         self.sock.sendto(data.encode(), (IP, PORT))
-        logger.info(data)
+        logger.debug(data)
 
     def services_resolved(self):
         super().services_resolved()
