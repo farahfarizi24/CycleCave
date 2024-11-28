@@ -7,6 +7,7 @@ public class Cameras : MonoBehaviourPunCallbacks
 {
     public List<camera> cameras;
     public float cameraMoveSpeed = 5f;
+    public float cameraRotationSpeed = 5f;
 
     private void Update()
     {
@@ -47,15 +48,38 @@ public class Cameras : MonoBehaviourPunCallbacks
     private void MoveCamera()
     {
         // Move forward with 'W' and backward with 'S'
+        float moveDirection = 0f;
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * cameraMoveSpeed * Time.deltaTime;
+            moveDirection = 1f; // Forward
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= transform.forward * cameraMoveSpeed * Time.deltaTime;
+            moveDirection = -1f; // Backward
         }
 
+        // Apply forward/backward movement
+        if (moveDirection != 0f)
+        {
+            transform.position += transform.forward * moveDirection * cameraMoveSpeed * Time.deltaTime;
+        }
+
+        // Steer left with 'A' and right with 'D'
+        float turnDirection = 0f;
+        if (Input.GetKey(KeyCode.A))
+        {
+            turnDirection = -1f; // Turn left
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            turnDirection = 1f; // Turn right
+        }
+
+        // Apply rotation
+        if (turnDirection != 0f)
+        {
+            transform.Rotate(0f, turnDirection * cameraRotationSpeed * Time.deltaTime * 100f, 0f); // Adjust the rotation speed as needed
+        }
     }
 }
 
