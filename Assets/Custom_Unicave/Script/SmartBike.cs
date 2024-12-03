@@ -9,7 +9,8 @@ using Unity.VisualScripting;
 
 public class SmartBike : MonoBehaviour
 {
-private UdpClient udpClient;
+    //For UDP connection - subject to change with direct connection using Kickr cable.
+    private UdpClient udpClient;
     private IPEndPoint remoteEndPoint;
 
     private Thread receiveThread;
@@ -22,7 +23,6 @@ private UdpClient udpClient;
     //Data variables
     public float speed;
     public float cadence;
-    public int power;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -35,6 +35,9 @@ private UdpClient udpClient;
     private bool isLogging = false;
     //Flag to check sessions
     public bool isSessionActive = false;
+
+    //Referencing to Manager to get the sessionid out of it.
+    public Manager manager;
 
     void Start()
     { 
@@ -59,11 +62,11 @@ private UdpClient udpClient;
             Debug.Log("SmartBike: Data logging started.");
             //Generate file for this session
             string sessionTimestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            sessionFilePath = $"bikeDataLog_{sessionTimestamp}.csv";
+            sessionFilePath = $"bikeDataLog_{manager.sessionid}_{sessionTimestamp}.csv";
             Debug.Log("New session file: " + sessionFilePath);
 
             //Initialize headers for file
-            string headerText = "LogID, Speed, Cadence, Power, Timestamp\n";
+            string headerText = "LogID, SessionID, Speed, Cadence, Timestamp\n";
             System.IO.File.WriteAllText(sessionFilePath, headerText);
             OnLoggingStarted?.Invoke(); //Notify listeners
         }
@@ -87,20 +90,21 @@ private UdpClient udpClient;
                         // Updating data
                         speed = payload.speed;
                         cadence = payload.cadence;
-                        power = payload.power;
-                        Debug.Log($"Updated speed: {speed}, Cadence: {cadence}, Power: {power}");
+                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}");
 
                         logCounter++;
+                        //Figure out how to connect the sessionID from lobby into here. 
                         LogEntry newLog = new LogEntry
                         {
                             logID = logCounter,
+                            sessionID = manager.sessionid,
                             speed = payload.speed,
                             cadence = payload.cadence,
-                            power = payload.power,
                             timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                         };
 
                         // Add LogEntry to data collection
+                        //Figure out how to make a separate file involving sessionIDs, for now.
                         dataLog.Add(newLog);
 
                         // Save the log data to file
@@ -134,7 +138,7 @@ private UdpClient udpClient;
 
 void SaveDataToFile(LogEntry log){
     // Append the log entry data
-    string logText = $"{log.logID}, {log.speed}, {log.cadence}, {log.power}, {log.timestamp}\n";
+    string logText = $"{log.logID}, {log.sessionID}, {log.speed}, {log.cadence}, {log.timestamp}\n";
     System.IO.File.AppendAllText(sessionFilePath, logText);
 
     Debug.Log("Log saved to: " + sessionFilePath);
@@ -154,16 +158,15 @@ void SaveDataToFile(LogEntry log){
     {
         public float speed;
         public float cadence;
-        public int power;
     }
 
     //Used for data collection log entry
     [System.Serializable]
     public class LogEntry{
         public int logID;
+        public string sessionID;
         public float speed;
         public float cadence;
-        public int power;
         public string timestamp;
     }
 }

@@ -8510,6 +8510,7 @@ MonoBehaviour:
   viewportPanel: {fileID: 1394468613}
   currentScreen: 0
   sessionid: 
+  smartBike: {fileID: 1789524522}
 --- !u!4 &926501005
 Transform:
   m_ObjectHideFlags: 0
@@ -17163,12 +17164,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1789524517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642fce3b1e0173a4baba5037ac1acd3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 671e3af04344e4b42be71843d912189e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
   cadence: 0
-  power: 0
+  isSessionActive: 0
+  manager: {fileID: 926501004}
 --- !u!1 &1799246333
 GameObject:
   m_ObjectHideFlags: 0

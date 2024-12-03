@@ -119,7 +119,7 @@ public class Manager : MonoBehaviourPunCallbacks
     {
         setState(State.lobby);
         Debug.Log("Joined Room");
-        Debug.Log(smartBike);
+        Debug.Log("Session id: " + sessionid);
 
         //For Smartbike Logging
         if (smartBike != null){
