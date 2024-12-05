@@ -4,6 +4,7 @@ using Photon.Realtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Manager : MonoBehaviourPunCallbacks
@@ -20,6 +21,7 @@ public class Manager : MonoBehaviourPunCallbacks
     public ButtonManager bottom_button;
     public ButtonManager right_button;
     public ButtonManager left_button;
+    public ButtonManager top_button;
 
     //sessionButtons
     public ButtonManager create_session;
@@ -40,12 +42,16 @@ public class Manager : MonoBehaviourPunCallbacks
 
     #region Network
 
+    //Referencing SmartBike to manager - to sync data log to lobby sessions
+    public SmartBike smartBike;
+
     private void Awake()
     {
         front_button.onClick.AddListener(() => SelectScreen(Screen.front));
         bottom_button.onClick.AddListener(() => SelectScreen(Screen.bottom));
         right_button.onClick.AddListener(() => SelectScreen(Screen.right));
         left_button.onClick.AddListener(() => SelectScreen(Screen.left));
+        top_button.onClick.AddListener(() => SelectScreen(Screen.Top));
 
         inputField.inputText.onEndEdit.AddListener((value) => sessionid = value);
 
@@ -115,6 +121,18 @@ public class Manager : MonoBehaviourPunCallbacks
     {
         setState(State.lobby);
         Debug.Log("Joined Room");
+        Debug.Log("Session id: " + sessionid);
+
+        //For Smartbike Logging
+        if (smartBike != null){
+            smartBike.OnLoggingStarted += () =>
+            {
+                Debug.Log("SmartBike logging has started.");
+            };
+
+            smartBike.StartLogging();
+            smartBike.setSessionActive(true);
+        }
     }
 
     #endregion
@@ -152,6 +170,12 @@ public class Manager : MonoBehaviourPunCallbacks
                 setState(State.game);
 
                 break;
+            case Screen.Top:
+                cameras.setCamera(Screen.Top);
+                    setState(State.game);
+    
+                    break;
+
             default:
                 break;
         }
@@ -197,7 +221,7 @@ public class Manager : MonoBehaviourPunCallbacks
 }
 public enum Screen
 {
-    front,bottom,right,left
+    front,bottom,right,left,Top
 }
 public enum State
 {
