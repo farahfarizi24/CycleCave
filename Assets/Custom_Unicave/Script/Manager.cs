@@ -21,6 +21,7 @@ public class Manager : MonoBehaviourPunCallbacks
     public ButtonManager bottom_button;
     public ButtonManager right_button;
     public ButtonManager left_button;
+    public ButtonManager top_button;
 
     //sessionButtons
     public ButtonManager create_session;
@@ -50,6 +51,7 @@ public class Manager : MonoBehaviourPunCallbacks
         bottom_button.onClick.AddListener(() => SelectScreen(Screen.bottom));
         right_button.onClick.AddListener(() => SelectScreen(Screen.right));
         left_button.onClick.AddListener(() => SelectScreen(Screen.left));
+        top_button.onClick.AddListener(() => SelectScreen(Screen.Top));
 
         inputField.inputText.onEndEdit.AddListener((value) => sessionid = value);
 
@@ -168,6 +170,12 @@ public class Manager : MonoBehaviourPunCallbacks
                 setState(State.game);
 
                 break;
+            case Screen.Top:
+                cameras.setCamera(Screen.Top);
+                    setState(State.game);
+    
+                    break;
+
             default:
                 break;
         }
@@ -213,7 +221,7 @@ public class Manager : MonoBehaviourPunCallbacks
 }
 public enum Screen
 {
-    front,bottom,right,left
+    front,bottom,right,left,Top
 }
 public enum State
 {
