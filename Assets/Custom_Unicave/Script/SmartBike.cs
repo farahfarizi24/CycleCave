@@ -12,7 +12,7 @@ public class SmartBike : MonoBehaviour
     //For UDP connection - subject to change with direct connection using Kickr cable.
     private UdpClient udpClient;
     private IPEndPoint remoteEndPoint;
-
+    public Cameras CamScript;
     private Thread receiveThread;
 
     private string serverIP = "10.148.112.66"; //Match with main computer IP, similar at the Python file used for bike   
@@ -128,10 +128,11 @@ public class SmartBike : MonoBehaviour
     void Update(){
         if(isSessionActive == true){
             
-            var step = Time.deltaTime * speed;
-
+            var step = Time.deltaTime * speed * 6.0f;
+            CamScript.cameraMoveSpeed = speed;
+            CamScript.MoveCode();
             //moving forward for now, according to value
-            transform.position += transform.forward * step;
+            //transform.position += transform.forward * step;
         }
         
     }

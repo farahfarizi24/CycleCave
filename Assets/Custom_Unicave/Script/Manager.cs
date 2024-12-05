@@ -4,8 +4,8 @@ using Photon.Realtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class Manager : MonoBehaviourPunCallbacks
 {
@@ -41,7 +41,6 @@ public class Manager : MonoBehaviourPunCallbacks
     public string sessionid;
 
     #region Network
-
     //Referencing SmartBike to manager - to sync data log to lobby sessions
     public SmartBike smartBike;
 
@@ -121,10 +120,11 @@ public class Manager : MonoBehaviourPunCallbacks
     {
         setState(State.lobby);
         Debug.Log("Joined Room");
-        Debug.Log("Session id: " + sessionid);
+        Debug.Log(smartBike);
 
         //For Smartbike Logging
-        if (smartBike != null){
+        if (smartBike != null)
+        {
             smartBike.OnLoggingStarted += () =>
             {
                 Debug.Log("SmartBike logging has started.");
