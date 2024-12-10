@@ -66,7 +66,7 @@ public class SmartBike : MonoBehaviour
             Debug.Log("New session file: " + sessionFilePath);
 
             //Initialize headers for file
-            string headerText = "LogID, SessionID, Speed, Cadence, Timestamp\n";
+            string headerText = "LogID, UserID, Speed, Cadence, Timestamp\n";
             System.IO.File.WriteAllText(sessionFilePath, headerText);
             OnLoggingStarted?.Invoke(); //Notify listeners
         }
