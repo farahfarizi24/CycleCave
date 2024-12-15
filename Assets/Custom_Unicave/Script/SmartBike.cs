@@ -23,6 +23,14 @@ public class SmartBike : MonoBehaviour
     //Data variables
     public float speed;
     public float cadence;
+    public bool brake;
+
+    // brake control vairables
+    public float preSpeed;
+    public bool brakeOverride;
+    // These constants need testing and adjustment
+    public const float killSpeed = 3.0;
+    public const float brakingRate = 0.5;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -87,13 +95,16 @@ public class SmartBike : MonoBehaviour
                     DataPayload payload = JsonUtility.FromJson<DataPayload>(message);
                     if (payload != null)
                     {
+
                         // Updating data
                         speed = payload.speed;
                         cadence = payload.cadence;
-                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}");
+                        brake = payload.brake;
+                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}, updated brake: {brake}");
 
                         logCounter++;
                         //Figure out how to connect the sessionID from lobby into here. 
+                        //Decide on if to log brake data - assuming this goes into the CSV
                         LogEntry newLog = new LogEntry
                         {
                             logID = logCounter,
@@ -123,11 +134,37 @@ public class SmartBike : MonoBehaviour
         }
     }
 
+    // block the read speed value and simulate braking if the brake was enabled and padelling has stopped
+    // ?maybe add gradually bring speed back up to prevent big jumps?
+    void ApplyBrake() {
+
+        // start/end the brake block & simulation
+        if (brake == true) {
+            brakeOverride = true;
+        }
+        else if (cadence > 0 && brakeOverride == true) {
+            brakeOverride = false;
+        }
+
+        if (brakeOverride == false) {
+            preSpeed = speed;
+            return;
+        }
+
+        // slow down the speed at a proportional rate
+        speed = preSpeed * brakingRate;
+        if (speed < killSpeed) {
+            speed = 0;
+        }
+        preSpeed = speed;
+    }
 
     //Moving the cameras along
     void Update(){
         if(isSessionActive == true){
-            
+
+            ApplyBrake();
+
             var step = Time.deltaTime * speed * 6.0f;
             CamScript.cameraMoveSpeed = speed;
             CamScript.MoveCode();
@@ -159,6 +196,7 @@ void SaveDataToFile(LogEntry log){
     {
         public float speed;
         public float cadence;
+        public bool brake;
     }
 
     //Used for data collection log entry
