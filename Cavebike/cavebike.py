@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
+import os
 import sys
 import gatt
 import json
 import time
+import datetime
 import logging
 import re
 import socket
+import RPi.GPIO as GPIO
+
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 # setup logging
 logger = logging.getLogger(__name__)
@@ -27,16 +32,26 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 sys.excepthook = handle_exception
 
+logger.info(f'Session Start:{datetime.datetime.now()}')
+
 # define IP & Port
-#IP = '10.148.112.66' # PC's
+IP = '10.148.112.66' # PC's
 #IP = '10.141.12.184' # D's
-IP = '10.141.44.235' # E's
-PORT = 1567 #5005
+PORT = 5005
+#IP = '10.141.30.208' # E's
+#PORT = 1567
 
 # constants
 KICKR_ADDRESS = 'd2:83:84:53:44:47'
 FTMS_UUID = 0x1826
 INDOOR_BIKE_DATA_UUID = 0x2AD2
+BRAKE_PIN = 37
+
+# data variables
+speed = None
+cadence = None
+power = None
+brake = None
 
 # helper function for matching uuids
 def service_or_characteristic_found(target_uuid, full_uuid):
@@ -49,7 +64,9 @@ def service_or_characteristic_found(target_uuid, full_uuid):
 
 class Cavebike(gatt.Device):
 
-    def __init__(self, mac_address, manager, sock, managed=True):
+    global speed, cadence, power, brake
+
+    def __init__(self, mac_address: str, manager: gatt.DeviceManager, sock: socket.socket, managed=True):
         super().__init__(mac_address, manager, managed)
 
         logger.info('Cavebike initialising')
@@ -60,6 +77,20 @@ class Cavebike(gatt.Device):
 
         # define socket
         self.sock = sock
+
+    def connect_succeeded(self):
+        logger.info('Connected to KICKR')
+
+    def connect_failed(self, error):
+        super().connect_failed(error)
+        logger.info('Connection attempt failed')
+        self.connect()
+
+    def disconnect_succeeded(self):
+        """When connection property changes and is no longer connected this method is called"""
+        super().disconnect_succeeded()
+        logger.info('Disconnected - attempting reconnect')
+        self.connect()
 
     def set_service_or_characteristic(self, service_or_characteristic):
 
@@ -76,6 +107,8 @@ class Cavebike(gatt.Device):
     def characteristic_value_updated(self, characteristic, value):
 
         if not (characteristic == self.indoor_bike_data): return
+
+        self.time_last_updated = time.time()
 
         logger.debug('Indoor Bike Data updated')
 
@@ -99,7 +132,8 @@ class Cavebike(gatt.Device):
             'ts' : time.time(), 
             'speed' : speed,
             'cadence' : cadence,
-            'power' : power
+            'power' : power,
+            'brake' : brake
         })
         self.sock.sendto(data.encode(), (IP, PORT))
         logger.debug(data)
@@ -117,11 +151,49 @@ class Cavebike(gatt.Device):
         logger.debug('Services resolved')
         logger.info('Cavebike initialised')
 
+class BrakeButton:
+
+    global speed, cadence, power, brake
+
+    def __init__(self, sock: socket.socket, pin: int = BRAKE_PIN):
+
+        # setup pin
+        self._pin = pin
+        self._state = False
+        GPIO.setup(self._pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+        GPIO.add_event_detect(self._pin, GPIO.BOTH, callback=self.state_change, bouncetime=75)
+
+        # define socket
+        self.sock = sock
+
+        logger.info('Brake Button Initialised')
+
+    def state_change(self, pin: int):
+        
+        self._state = bool(GPIO.input(self._pin))
+        brake = self._state
+
+        # send data over UDP
+        #data = json.dumps({ 'ts' : time.time(), 'state' : self._state })
+        data = json.dumps({
+            'ts' : time.time(), 
+            'speed' : speed,
+            'cadence' : cadence,
+            'power' : power,
+            'brake' : brake
+        })
+        self.sock.sendto(data.encode(), (IP, PORT))
+        logger.debug(data)
+
 def main():
 
     # setup socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     logger.info(f'Expected client is {IP}:{PORT}')
+
+    # initialise brake button
+    GPIO.setmode(GPIO.BOARD)
+    brake_button = BrakeButton(sock) # FIXME: setup braking in the unity project
 
     # initialise the device manager
     manager = gatt.DeviceManager(adapter_name='hci0')
@@ -129,7 +201,7 @@ def main():
 
     # initialise and connect to KICKR
     kickr = Cavebike(KICKR_ADDRESS, manager, sock)
-    logger.info('connecting to KICKR')
+    logger.info('Connecting to KICKR')
     kickr.connect()
     manager.stop_discovery()
 
