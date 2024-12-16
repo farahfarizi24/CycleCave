@@ -18,11 +18,21 @@ public class SmartBike : MonoBehaviour
     private string serverIP = "10.148.112.66"; //Match with main computer IP, similar at the Python file used for bike   
     //private string serverIP = "127.0.0.1"; //For testing purposes
     private int serverPort = 5005; //Match Python's Server port
+    //private int serverPort = 1567;
     private bool isReceiving = true;
 
     //Data variables
     public float speed;
     public float cadence;
+    public bool brake;
+
+    // brake control vairables
+    public float preSpeed;
+    public bool brakeOverride;
+    // These constants need testing and adjustment
+    public const float ZeroSpeedThreshold = 2.0f;
+    public const float BrakingRate = 0.7f;
+    public const float CoastingRate = 0.9f;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -87,13 +97,19 @@ public class SmartBike : MonoBehaviour
                     DataPayload payload = JsonUtility.FromJson<DataPayload>(message);
                     if (payload != null)
                     {
+
                         // Updating data
                         speed = payload.speed;
                         cadence = payload.cadence;
-                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}");
+                        brake = payload.brake;
+                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}, updated brake: {brake}");
+
+                        // reduce speed if brake applied
+                        ApplyBrake();
 
                         logCounter++;
                         //Figure out how to connect the sessionID from lobby into here. 
+                        //Decide on if to log brake data - assuming this goes into the CSV
                         LogEntry newLog = new LogEntry
                         {
                             logID = logCounter,
@@ -123,11 +139,46 @@ public class SmartBike : MonoBehaviour
         }
     }
 
+    // block the read speed value and simulate braking if the brake was enabled and padelling has stopped
+    // ?maybe add gradually bring speed back up to prevent big jumps?
+    void ApplyBrake() {
+
+        // start/end the brake block & simulation
+        if (brake == true) {
+            brakeOverride = true;
+            Debug.Log("Brake Enabled");
+        }
+        else if (cadence > 0 && brakeOverride == true) {
+            brakeOverride = false;
+            Debug.Log("Brake Disabled");
+            // gradually increase speed back up after brake release?
+        }
+
+        // do not brake
+        if (brakeOverride == false) {
+            preSpeed = speed;
+            return;
+        }
+
+        // slow down based on if braking or coasting
+        if (brake == true) {
+            speed = preSpeed * BrakingRate;
+        }
+        else {
+            speed = preSpeed * CoastingRate;
+        }
+
+        // 0 speed if below threshold
+        if (speed < ZeroSpeedThreshold) {
+            speed = 0;
+        }
+        preSpeed = speed;
+    }
 
     //Moving the cameras along
     void Update(){
         if(isSessionActive == true){
-            
+
             var step = Time.deltaTime * speed * 6.0f;
             CamScript.cameraMoveSpeed = speed;
             CamScript.MoveCode();
@@ -159,6 +210,7 @@ void SaveDataToFile(LogEntry log){
     {
         public float speed;
         public float cadence;
+        public bool brake;
     }
 
     //Used for data collection log entry
