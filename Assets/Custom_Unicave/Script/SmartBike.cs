@@ -18,6 +18,7 @@ public class SmartBike : MonoBehaviour
     private string serverIP = "10.148.112.66"; //Match with main computer IP, similar at the Python file used for bike   
     //private string serverIP = "127.0.0.1"; //For testing purposes
     private int serverPort = 5005; //Match Python's Server port
+    //private int serverPort = 1567;
     private bool isReceiving = true;
 
     //Data variables
@@ -29,8 +30,8 @@ public class SmartBike : MonoBehaviour
     public float preSpeed;
     public bool brakeOverride;
     // These constants need testing and adjustment
-    public const float killSpeed = 3.0;
-    public const float brakingRate = 0.5;
+    public const float KillSpeed = 2.0f;
+    public const float BrakingRate = 0.7f;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -102,6 +103,9 @@ public class SmartBike : MonoBehaviour
                         brake = payload.brake;
                         Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}, updated brake: {brake}");
 
+                        // reduce speed if brake applied
+                        ApplyBrake();
+
                         logCounter++;
                         //Figure out how to connect the sessionID from lobby into here. 
                         //Decide on if to log brake data - assuming this goes into the CSV
@@ -141,9 +145,12 @@ public class SmartBike : MonoBehaviour
         // start/end the brake block & simulation
         if (brake == true) {
             brakeOverride = true;
+            Debug.Log("Brake Enabled");
         }
         else if (cadence > 0 && brakeOverride == true) {
             brakeOverride = false;
+            Debug.Log("Brake Disabled");
+            // gradually increase speed back up after brake release?
         }
 
         if (brakeOverride == false) {
@@ -152,8 +159,8 @@ public class SmartBike : MonoBehaviour
         }
 
         // slow down the speed at a proportional rate
-        speed = preSpeed * brakingRate;
-        if (speed < killSpeed) {
+        speed = preSpeed * BrakingRate;
+        if (speed < KillSpeed) {
             speed = 0;
         }
         preSpeed = speed;
@@ -162,8 +169,6 @@ public class SmartBike : MonoBehaviour
     //Moving the cameras along
     void Update(){
         if(isSessionActive == true){
-
-            ApplyBrake();
 
             var step = Time.deltaTime * speed * 6.0f;
             CamScript.cameraMoveSpeed = speed;

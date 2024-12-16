@@ -48,10 +48,10 @@ INDOOR_BIKE_DATA_UUID = 0x2AD2
 BRAKE_PIN = 37
 
 # data variables
-speed = None
-cadence = None
-power = None
-brake = None
+speed = 0.0
+cadence = 0.0
+power = 0
+brake = False
 
 # helper function for matching uuids
 def service_or_characteristic_found(target_uuid, full_uuid):
@@ -63,8 +63,6 @@ def service_or_characteristic_found(target_uuid, full_uuid):
 # ===== Driver =====
 
 class Cavebike(gatt.Device):
-
-    global speed, cadence, power, brake
 
     def __init__(self, mac_address: str, manager: gatt.DeviceManager, sock: socket.socket, managed=True):
         super().__init__(mac_address, manager, managed)
@@ -105,6 +103,7 @@ class Cavebike(gatt.Device):
 
     # called when the bike data updates
     def characteristic_value_updated(self, characteristic, value):
+        global speed, cadence, power, brake
 
         if not (characteristic == self.indoor_bike_data): return
 
@@ -153,8 +152,6 @@ class Cavebike(gatt.Device):
 
 class BrakeButton:
 
-    global speed, cadence, power, brake
-
     def __init__(self, sock: socket.socket, pin: int = BRAKE_PIN):
 
         # setup pin
@@ -169,6 +166,7 @@ class BrakeButton:
         logger.info('Brake Button Initialised')
 
     def state_change(self, pin: int):
+        global speed, cadence, power, brake
         
         self._state = bool(GPIO.input(self._pin))
         brake = self._state
@@ -193,7 +191,7 @@ def main():
 
     # initialise brake button
     GPIO.setmode(GPIO.BOARD)
-    brake_button = BrakeButton(sock) # FIXME: setup braking in the unity project
+    brake_button = BrakeButton(sock)
 
     # initialise the device manager
     manager = gatt.DeviceManager(adapter_name='hci0')
