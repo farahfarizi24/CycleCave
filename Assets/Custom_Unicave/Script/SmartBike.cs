@@ -30,8 +30,9 @@ public class SmartBike : MonoBehaviour
     public float preSpeed;
     public bool brakeOverride;
     // These constants need testing and adjustment
-    public const float KillSpeed = 2.0f;
+    public const float ZeroSpeedThreshold = 2.0f;
     public const float BrakingRate = 0.7f;
+    public const float CoastingRate = 0.9f;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -153,14 +154,22 @@ public class SmartBike : MonoBehaviour
             // gradually increase speed back up after brake release?
         }
 
+        // do not brake
         if (brakeOverride == false) {
             preSpeed = speed;
             return;
         }
 
-        // slow down the speed at a proportional rate
-        speed = preSpeed * BrakingRate;
-        if (speed < KillSpeed) {
+        // slow down based on if braking or coasting
+        if (brake == true) {
+            speed = preSpeed * BrakingRate;
+        }
+        else {
+            speed = preSpeed * CoastingRate;
+        }
+
+        // 0 speed if below threshold
+        if (speed < ZeroSpeedThreshold) {
             speed = 0;
         }
         preSpeed = speed;
