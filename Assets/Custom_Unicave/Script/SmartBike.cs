@@ -12,7 +12,7 @@ public class SmartBike : MonoBehaviour
     //For UDP connection - subject to change with direct connection using Kickr cable.
     private UdpClient udpClient;
     private IPEndPoint remoteEndPoint;
-    public Cameras CamScript;
+    Cameras CamScript;
     private Thread receiveThread;
 
     private string serverIP = "10.148.112.66"; //Match with main computer IP, similar at the Python file used for bike   
@@ -30,9 +30,8 @@ public class SmartBike : MonoBehaviour
     public float preSpeed;
     public bool brakeOverride;
     // These constants need testing and adjustment
-    public const float ZeroSpeedThreshold = 2.0f;
+    public const float KillSpeed = 2.0f;
     public const float BrakingRate = 0.7f;
-    public const float CoastingRate = 0.9f;
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -46,11 +45,15 @@ public class SmartBike : MonoBehaviour
     //Flag to check sessions
     public bool isSessionActive = false;
 
-    //Referencing to Manager to get the sessionid out of it.
-    public Manager manager;
+    private void Awake()
+    {
+        CamScript = GetComponent<Cameras>();
+        StartLogging();
+        setSessionActive(true);
+    }
 
     void Start()
-    { 
+    {
         //Set up UDP client
         udpClient = new UdpClient(serverPort);
         remoteEndPoint = new IPEndPoint(IPAddress.Parse(serverIP), serverPort);
@@ -61,35 +64,42 @@ public class SmartBike : MonoBehaviour
         receiveThread.Start();
     }
 
-    public void setSessionActive(bool active){
+    public void setSessionActive(bool active)
+    {
         isSessionActive = active;
         Debug.Log($"Session active: {isSessionActive}");
     }
 
-    public void StartLogging(){
-        if (!isLogging){
+    public void StartLogging()
+    {
+        if (!isLogging)
+        {
             isLogging = true;
             Debug.Log("SmartBike: Data logging started.");
             //Generate file for this session
             string sessionTimestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            sessionFilePath = $"bikeDataLog_{manager.sessionid}_{sessionTimestamp}.csv";
+            sessionFilePath = $"bikeDataLog_{Manager.instance.sessionid}_{sessionTimestamp}.csv";
             Debug.Log("New session file: " + sessionFilePath);
 
             //Initialize headers for file
-            string headerText = "LogID, UserID, Speed, Cadence, Timestamp\n";
+            string headerText = "LogID, SessionID, Speed, Cadence, Timestamp\n";
             System.IO.File.WriteAllText(sessionFilePath, headerText);
             OnLoggingStarted?.Invoke(); //Notify listeners
         }
     }
 
-    void ReceiveData(){
-        try{
-            while (isReceiving){
+    void ReceiveData()
+    {
+        try
+        {
+            while (isReceiving)
+            {
                 // Receive data from server
                 byte[] data = udpClient.Receive(ref remoteEndPoint); // Blocks until data is received
                 string message = Encoding.UTF8.GetString(data);
 
-                if (isSessionActive){
+                if (isSessionActive)
+                {
                     // Log received data
                     Debug.Log("Received: " + message);
 
@@ -113,7 +123,7 @@ public class SmartBike : MonoBehaviour
                         LogEntry newLog = new LogEntry
                         {
                             logID = logCounter,
-                            sessionID = manager.sessionid,
+                            sessionID = Manager.instance.sessionid,
                             speed = payload.speed,
                             cadence = payload.cadence,
                             timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
@@ -141,60 +151,60 @@ public class SmartBike : MonoBehaviour
 
     // block the read speed value and simulate braking if the brake was enabled and padelling has stopped
     // ?maybe add gradually bring speed back up to prevent big jumps?
-    void ApplyBrake() {
+    void ApplyBrake()
+    {
 
         // start/end the brake block & simulation
-        if (brake == true) {
+        if (brake == true)
+        {
             brakeOverride = true;
             Debug.Log("Brake Enabled");
         }
-        else if (cadence > 0 && brakeOverride == true) {
+        else if (cadence > 0 && brakeOverride == true)
+        {
             brakeOverride = false;
             Debug.Log("Brake Disabled");
             // gradually increase speed back up after brake release?
         }
 
-        // do not brake
-        if (brakeOverride == false) {
+        if (brakeOverride == false)
+        {
             preSpeed = speed;
             return;
         }
 
-        // slow down based on if braking or coasting
-        if (brake == true) {
-            speed = preSpeed * BrakingRate;
-        }
-        else {
-            speed = preSpeed * CoastingRate;
-        }
-
-        // 0 speed if below threshold
-        if (speed < ZeroSpeedThreshold) {
+        // slow down the speed at a proportional rate
+        speed = preSpeed * BrakingRate;
+        if (speed < KillSpeed)
+        {
             speed = 0;
         }
         preSpeed = speed;
     }
 
     //Moving the cameras along
-    void Update(){
-        if(isSessionActive == true){
+    void Update()
+    {
+        if (isSessionActive == true)
+        {
 
             var step = Time.deltaTime * speed * 6.0f;
             CamScript.cameraMoveSpeed = speed;
-            CamScript.MoveCode();
+            CamScript.Move();
             //moving forward for now, according to value
             //transform.position += transform.forward * step;
         }
-        
+
     }
 
-void SaveDataToFile(LogEntry log){
-    // Append the log entry data
-    string logText = $"{log.logID}, {log.sessionID}, {log.speed}, {log.cadence}, {log.timestamp}\n";
-    System.IO.File.AppendAllText(sessionFilePath, logText);
+    void SaveDataToFile(LogEntry log)
+    {
+        // Append the log entry data
+        string logText = $"{log.logID}, {log.sessionID}, {log.speed}, {log.cadence}, {log.timestamp}\n";
+        System.IO.File.AppendAllText(sessionFilePath, logText);
 
-    Debug.Log("Log saved to: " + sessionFilePath);
-}
+        Debug.Log("Log saved to: " + sessionFilePath);
+    }
 
     void OnApplicationQuit()
     {
@@ -215,7 +225,8 @@ void SaveDataToFile(LogEntry log){
 
     //Used for data collection log entry
     [System.Serializable]
-    public class LogEntry{
+    public class LogEntry
+    {
         public int logID;
         public string sessionID;
         public float speed;

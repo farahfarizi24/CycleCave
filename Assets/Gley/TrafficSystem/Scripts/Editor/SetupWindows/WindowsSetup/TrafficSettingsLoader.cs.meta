@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7bd23851496d7994da924fa141f31b30
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277301
+  packageName: Mobile Traffic System v2.0
+  packageVersion: 2.1.1
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Editor/SetupWindows/WindowsSetup/TrafficSettingsLoader.cs
+  uploadId: 653948

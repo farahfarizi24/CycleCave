@@ -1,0 +1,2299 @@
+fileFormatVersion: 2
+guid: 4f9e51d4fb9be3049a7162f98567a4e7
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: B court fe
+  - first:
+      1: 100002
+    second: B court li
+  - first:
+      1: 100004
+    second: Basketball
+  - first:
+      1: 100006
+    second: BG10C1
+  - first:
+      1: 100008
+    second: BG10C1Glas
+  - first:
+      1: 100010
+    second: BG27bC1
+  - first:
+      1: 100012
+    second: Block 1
+  - first:
+      1: 100014
+    second: Block 1 pl
+  - first:
+      1: 100016
+    second: Block 1 St
+  - first:
+      1: 100018
+    second: Block 4
+  - first:
+      1: 100020
+    second: Block 4 de
+  - first:
+      1: 100022
+    second: Block 4 P0
+  - first:
+      1: 100024
+    second: Block 4 Pl
+  - first:
+      1: 100026
+    second: Block 4 Tr
+  - first:
+      1: 100028
+    second: Block1 Tre
+  - first:
+      1: 100030
+    second: Block1Stre
+  - first:
+      1: 100032
+    second: Block3
+  - first:
+      1: 100034
+    second: Block4
+  - first:
+      1: 100036
+    second: Block4 det
+  - first:
+      1: 100038
+    second: Church
+  - first:
+      1: 100040
+    second: Glass Chur
+  - first:
+      1: 100042
+    second: Glass KC10
+  - first:
+      1: 100044
+    second: Glass2KC8B
+  - first:
+      1: 100046
+    second: Glass2KC9B
+  - first:
+      1: 100048
+    second: Glass3KC8B
+  - first:
+      1: 100050
+    second: Glass4KC8B
+  - first:
+      1: 100052
+    second: Glass5KC8B
+  - first:
+      1: 100054
+    second: Glass6KC8B
+  - first:
+      1: 100056
+    second: GlassBG27C
+  - first:
+      1: 100058
+    second: GlassKC100
+  - first:
+      1: 100060
+    second: GlassKC101
+  - first:
+      1: 100062
+    second: GlassKC102
+  - first:
+      1: 100064
+    second: GlassKC103
+  - first:
+      1: 100066
+    second: GlassKC104
+  - first:
+      1: 100068
+    second: GlassKC105
+  - first:
+      1: 100070
+    second: GlassKC106
+  - first:
+      1: 100072
+    second: GlassKC107
+  - first:
+      1: 100074
+    second: GlassKC108
+  - first:
+      1: 100076
+    second: GlassKC109
+  - first:
+      1: 100078
+    second: GlassKC10B
+  - first:
+      1: 100080
+    second: GlassKC110
+  - first:
+      1: 100082
+    second: GlassKC111
+  - first:
+      1: 100084
+    second: GlassKC112
+  - first:
+      1: 100086
+    second: GlassKC2BG
+  - first:
+      1: 100088
+    second: GlassKC3BG
+  - first:
+      1: 100090
+    second: GlassKC4B0
+  - first:
+      1: 100092
+    second: GlassKC4BG
+  - first:
+      1: 100094
+    second: GlassKC5BG
+  - first:
+      1: 100096
+    second: GlassKC6BG
+  - first:
+      1: 100098
+    second: GlassKC7B0
+  - first:
+      1: 100100
+    second: GlassKC7BG
+  - first:
+      1: 100102
+    second: GlassKC8B0
+  - first:
+      1: 100104
+    second: GlassKC8BG
+  - first:
+      1: 100106
+    second: GlassKC9B0
+  - first:
+      1: 100108
+    second: GlassKC9B1
+  - first:
+      1: 100110
+    second: GlassKC9BG
+  - first:
+      1: 100112
+    second: glassSolar
+  - first:
+      1: 100114
+    second: KC10BG01
+  - first:
+      1: 100116
+    second: KC10BG02
+  - first:
+      1: 100118
+    second: KC10BG03
+  - first:
+      1: 100120
+    second: KC10BG04
+  - first:
+      1: 100122
+    second: KC10BG05
+  - first:
+      1: 100124
+    second: KC10BG05b
+  - first:
+      1: 100126
+    second: KC10BG06
+  - first:
+      1: 100128
+    second: KC10BG10
+  - first:
+      1: 100130
+    second: KC10BG14
+  - first:
+      1: 100132
+    second: KC10BG15
+  - first:
+      1: 100134
+    second: KC10BG17
+  - first:
+      1: 100136
+    second: KC10BG22
+  - first:
+      1: 100138
+    second: KC10BG24
+  - first:
+      1: 100140
+    second: KC10BG30
+  - first:
+      1: 100142
+    second: KC10BG32
+  - first:
+      1: 100144
+    second: //RootNode
+  - first:
+      1: 100146
+    second: KC2BG20
+  - first:
+      1: 100148
+    second: KC3BG13
+  - first:
+      1: 100150
+    second: KC4BG06
+  - first:
+      1: 100152
+    second: KC4BG16
+  - first:
+      1: 100154
+    second: KC5BG21
+  - first:
+      1: 100156
+    second: KC6BG16
+  - first:
+      1: 100158
+    second: KC7BG10
+  - first:
+      1: 100160
+    second: KC8BG06
+  - first:
+      1: 100162
+    second: KC8BG06 de
+  - first:
+      1: 100164
+    second: KC8BG15
+  - first:
+      1: 100166
+    second: KC9BG03
+  - first:
+      1: 100168
+    second: KC9BG19
+  - first:
+      1: 100170
+    second: KC9BG19Bli
+  - first:
+      1: 100172
+    second: KC9BG21
+  - first:
+      1: 100174
+    second: Object01
+  - first:
+      4: 400000
+    second: B court fe
+  - first:
+      4: 400002
+    second: B court li
+  - first:
+      4: 400004
+    second: Basketball
+  - first:
+      4: 400006
+    second: BG10C1
+  - first:
+      4: 400008
+    second: BG10C1Glas
+  - first:
+      4: 400010
+    second: BG27bC1
+  - first:
+      4: 400012
+    second: Block 1
+  - first:
+      4: 400014
+    second: Block 1 pl
+  - first:
+      4: 400016
+    second: Block 1 St
+  - first:
+      4: 400018
+    second: Block 4
+  - first:
+      4: 400020
+    second: Block 4 de
+  - first:
+      4: 400022
+    second: Block 4 P0
+  - first:
+      4: 400024
+    second: Block 4 Pl
+  - first:
+      4: 400026
+    second: Block 4 Tr
+  - first:
+      4: 400028
+    second: Block1 Tre
+  - first:
+      4: 400030
+    second: Block1Stre
+  - first:
+      4: 400032
+    second: Block3
+  - first:
+      4: 400034
+    second: Block4
+  - first:
+      4: 400036
+    second: Block4 det
+  - first:
+      4: 400038
+    second: Church
+  - first:
+      4: 400040
+    second: Glass Chur
+  - first:
+      4: 400042
+    second: Glass KC10
+  - first:
+      4: 400044
+    second: Glass2KC8B
+  - first:
+      4: 400046
+    second: Glass2KC9B
+  - first:
+      4: 400048
+    second: Glass3KC8B
+  - first:
+      4: 400050
+    second: Glass4KC8B
+  - first:
+      4: 400052
+    second: Glass5KC8B
+  - first:
+      4: 400054
+    second: Glass6KC8B
+  - first:
+      4: 400056
+    second: GlassBG27C
+  - first:
+      4: 400058
+    second: GlassKC100
+  - first:
+      4: 400060
+    second: GlassKC101
+  - first:
+      4: 400062
+    second: GlassKC102
+  - first:
+      4: 400064
+    second: GlassKC103
+  - first:
+      4: 400066
+    second: GlassKC104
+  - first:
+      4: 400068
+    second: GlassKC105
+  - first:
+      4: 400070
+    second: GlassKC106
+  - first:
+      4: 400072
+    second: GlassKC107
+  - first:
+      4: 400074
+    second: GlassKC108
+  - first:
+      4: 400076
+    second: GlassKC109
+  - first:
+      4: 400078
+    second: GlassKC10B
+  - first:
+      4: 400080
+    second: GlassKC110
+  - first:
+      4: 400082
+    second: GlassKC111
+  - first:
+      4: 400084
+    second: GlassKC112
+  - first:
+      4: 400086
+    second: GlassKC2BG
+  - first:
+      4: 400088
+    second: GlassKC3BG
+  - first:
+      4: 400090
+    second: GlassKC4B0
+  - first:
+      4: 400092
+    second: GlassKC4BG
+  - first:
+      4: 400094
+    second: GlassKC5BG
+  - first:
+      4: 400096
+    second: GlassKC6BG
+  - first:
+      4: 400098
+    second: GlassKC7B0
+  - first:
+      4: 400100
+    second: GlassKC7BG
+  - first:
+      4: 400102
+    second: GlassKC8B0
+  - first:
+      4: 400104
+    second: GlassKC8BG
+  - first:
+      4: 400106
+    second: GlassKC9B0
+  - first:
+      4: 400108
+    second: GlassKC9B1
+  - first:
+      4: 400110
+    second: GlassKC9BG
+  - first:
+      4: 400112
+    second: glassSolar
+  - first:
+      4: 400114
+    second: KC10BG01
+  - first:
+      4: 400116
+    second: KC10BG02
+  - first:
+      4: 400118
+    second: KC10BG03
+  - first:
+      4: 400120
+    second: KC10BG04
+  - first:
+      4: 400122
+    second: KC10BG05
+  - first:
+      4: 400124
+    second: KC10BG05b
+  - first:
+      4: 400126
+    second: KC10BG06
+  - first:
+      4: 400128
+    second: KC10BG10
+  - first:
+      4: 400130
+    second: KC10BG14
+  - first:
+      4: 400132
+    second: KC10BG15
+  - first:
+      4: 400134
+    second: KC10BG17
+  - first:
+      4: 400136
+    second: KC10BG22
+  - first:
+      4: 400138
+    second: KC10BG24
+  - first:
+      4: 400140
+    second: KC10BG30
+  - first:
+      4: 400142
+    second: KC10BG32
+  - first:
+      4: 400144
+    second: //RootNode
+  - first:
+      4: 400146
+    second: KC2BG20
+  - first:
+      4: 400148
+    second: KC3BG13
+  - first:
+      4: 400150
+    second: KC4BG06
+  - first:
+      4: 400152
+    second: KC4BG16
+  - first:
+      4: 400154
+    second: KC5BG21
+  - first:
+      4: 400156
+    second: KC6BG16
+  - first:
+      4: 400158
+    second: KC7BG10
+  - first:
+      4: 400160
+    second: KC8BG06
+  - first:
+      4: 400162
+    second: KC8BG06 de
+  - first:
+      4: 400164
+    second: KC8BG15
+  - first:
+      4: 400166
+    second: KC9BG03
+  - first:
+      4: 400168
+    second: KC9BG19
+  - first:
+      4: 400170
+    second: KC9BG19Bli
+  - first:
+      4: 400172
+    second: KC9BG21
+  - first:
+      4: 400174
+    second: Object01
+  - first:
+      21: 2100000
+    second: Glass18reflectio
+  - first:
+      21: 2100002
+    second: Material #261
+  - first:
+      21: 2100004
+    second: Material #272
+  - first:
+      21: 2100006
+    second: 01 - Default7
+  - first:
+      21: 2100008
+    second: 19 - Default
+  - first:
+      21: 2100010
+    second: 03 - Default1
+  - first:
+      21: 2100012
+    second: 02 - Default4
+  - first:
+      21: 2100014
+    second: 08 - Default3
+  - first:
+      21: 2100016
+    second: 13 - Default
+  - first:
+      21: 2100018
+    second: Material #76
+  - first:
+      21: 2100020
+    second: Material #80
+  - first:
+      21: 2100022
+    second: 07 - Default2
+  - first:
+      21: 2100024
+    second: 14 - Default
+  - first:
+      21: 2100026
+    second: 15 - Default
+  - first:
+      21: 2100028
+    second: Material #48
+  - first:
+      21: 2100030
+    second: Material #491
+  - first:
+      21: 2100032
+    second: Material #50
+  - first:
+      21: 2100034
+    second: 09 - Default1
+  - first:
+      21: 2100036
+    second: Material #37
+  - first:
+      21: 2100038
+    second: Material #38
+  - first:
+      21: 2100040
+    second: Material #39
+  - first:
+      21: 2100042
+    second: Material #114
+  - first:
+      21: 2100044
+    second: Material #115
+  - first:
+      21: 2100046
+    second: Material #116
+  - first:
+      21: 2100048
+    second: Material #262
+  - first:
+      21: 2100050
+    second: 02 - Default5
+  - first:
+      21: 2100052
+    second: 03 - Default2
+  - first:
+      21: 2100054
+    second: 07 - Default3
+  - first:
+      21: 2100056
+    second: 08 - Default4
+  - first:
+      21: 2100058
+    second: 09 - Default2
+  - first:
+      21: 2100060
+    second: 01 - Default8
+  - first:
+      21: 2100062
+    second: Material #47
+  - first:
+      21: 2100064
+    second: Material #52
+  - first:
+      21: 2100066
+    second: Material #53
+  - first:
+      21: 2100068
+    second: Material #391
+  - first:
+      21: 2100070
+    second: Material #40
+  - first:
+      21: 2100072
+    second: 15 - Default1
+  - first:
+      21: 2100074
+    second: 13 - Default1
+  - first:
+      21: 2100076
+    second: 02 - Default6
+  - first:
+      21: 2100078
+    second: 03 - Default3
+  - first:
+      21: 2100080
+    second: 07 - Default4
+  - first:
+      21: 2100082
+    second: 08 - Default5
+  - first:
+      21: 2100084
+    second: 09 - Default3
+  - first:
+      21: 2100086
+    second: 01 - Default9
+  - first:
+      21: 2100088
+    second: 13 - Default2
+  - first:
+      21: 2100090
+    second: 15 - Default2
+  - first:
+      21: 2100092
+    second: 14 - Default1
+  - first:
+      21: 2100094
+    second: 15 - Default3
+  - first:
+      21: 2100096
+    second: 02 - Default7
+  - first:
+      21: 2100098
+    second: 03 - Default4
+  - first:
+      21: 2100100
+    second: 07 - Default5
+  - first:
+      21: 2100102
+    second: 08 - Default6
+  - first:
+      21: 2100104
+    second: 01 - Default10
+  - first:
+      21: 2100106
+    second: 09 - Default4
+  - first:
+      21: 2100108
+    second: 13 - Default3
+  - first:
+      21: 2100110
+    second: 14 - Default2
+  - first:
+      21: 2100112
+    second: 15 - Default4
+  - first:
+      21: 2100114
+    second: 02 - Default8
+  - first:
+      21: 2100116
+    second: 03 - Default5
+  - first:
+      21: 2100118
+    second: 07 - Default6
+  - first:
+      21: 2100120
+    second: 01 - Default11
+  - first:
+      21: 2100122
+    second: 09 - Default5
+  - first:
+      21: 2100124
+    second: 13 - Default4
+  - first:
+      21: 2100126
+    second: 14 - Default3
+  - first:
+      21: 2100128
+    second: 15 - Default5
+  - first:
+      21: 2100130
+    second: 08 - Default7
+  - first:
+      21: 2100132
+    second: 19 - Default1
+  - first:
+      21: 2100134
+    second: 02 - Default9
+  - first:
+      21: 2100136
+    second: 03 - Default6
+  - first:
+      21: 2100138
+    second: 07 - Default7
+  - first:
+      21: 2100140
+    second: 08 - Default8
+  - first:
+      21: 2100142
+    second: 13 - Default5
+  - first:
+      21: 2100144
+    second: Material #64
+  - first:
+      21: 2100146
+    second: 09 - Default6
+  - first:
+      21: 2100148
+    second: 03 - Default7
+  - first:
+      21: 2100150
+    second: 15 - Default6
+  - first:
+      21: 2100152
+    second: 14 - Default4
+  - first:
+      21: 2100154
+    second: 02 - Default10
+  - first:
+      21: 2100156
+    second: 01 - Default12
+  - first:
+      21: 2100158
+    second: 03 - Default8
+  - first:
+      21: 2100160
+    second: 07 - Default8
+  - first:
+      21: 2100162
+    second: 08 - Default9
+  - first:
+      21: 2100164
+    second: 15 - Default7
+  - first:
+      21: 2100166
+    second: 09 - Default7
+  - first:
+      21: 2100168
+    second: 13 - Default6
+  - first:
+      21: 2100170
+    second: 02 - Default11
+  - first:
+      21: 2100172
+    second: 14 - Default5
+  - first:
+      21: 2100174
+    second: Material #581
+  - first:
+      21: 2100176
+    second: 01 - Default13
+  - first:
+      21: 2100178
+    second: 13 - Default7
+  - first:
+      21: 2100180
+    second: Material #374
+  - first:
+      21: 2100182
+    second: 09 - Default8
+  - first:
+      21: 2100184
+    second: 14 - Default6
+  - first:
+      21: 2100186
+    second: 02 - Default12
+  - first:
+      21: 2100188
+    second: 01 - Default14
+  - first:
+      21: 2100190
+    second: 03 - Default9
+  - first:
+      21: 2100192
+    second: 07 - Default9
+  - first:
+      21: 2100194
+    second: 08 - Default10
+  - first:
+      21: 2100196
+    second: 09 - Default9
+  - first:
+      21: 2100198
+    second: 13 - Default8
+  - first:
+      21: 2100200
+    second: 03 - Default10
+  - first:
+      21: 2100202
+    second: 01 - Default15
+  - first:
+      21: 2100204
+    second: 02 - Default13
+  - first:
+      21: 2100206
+    second: 07 - Default10
+  - first:
+      21: 2100208
+    second: 08 - Default11
+  - first:
+      21: 2100210
+    second: 09 - Default10
+  - first:
+      21: 2100212
+    second: 13 - Default9
+  - first:
+      21: 2100214
+    second: 14 - Default7
+  - first:
+      21: 2100216
+    second: 15 - Default8
+  - first:
+      21: 2100218
+    second: 02 - Default14
+  - first:
+      21: 2100220
+    second: 14 - Default8
+  - first:
+      21: 2100222
+    second: 19 - Default2
+  - first:
+      21: 2100224
+    second: 02 - Default15
+  - first:
+      21: 2100226
+    second: 03 - Default11
+  - first:
+      21: 2100228
+    second: 07 - Default11
+  - first:
+      21: 2100230
+    second: 08 - Default12
+  - first:
+      21: 2100232
+    second: 09 - Default11
+  - first:
+      21: 2100234
+    second: 01 - Default16
+  - first:
+      21: 2100236
+    second: 14 - Default9
+  - first:
+      21: 2100238
+    second: 13 - Default10
+  - first:
+      21: 2100240
+    second: 02 - Default16
+  - first:
+      21: 2100242
+    second: 14 - Default10
+  - first:
+      21: 2100244
+    second: 15 - Default9
+  - first:
+      23: 2300000
+    second: B court fe
+  - first:
+      23: 2300002
+    second: B court li
+  - first:
+      23: 2300004
+    second: Basketball
+  - first:
+      23: 2300006
+    second: BG10C1
+  - first:
+      23: 2300008
+    second: BG10C1Glas
+  - first:
+      23: 2300010
+    second: BG27bC1
+  - first:
+      23: 2300012
+    second: Block 1
+  - first:
+      23: 2300014
+    second: Block 4
+  - first:
+      23: 2300016
+    second: Block3
+  - first:
+      23: 2300018
+    second: Block4
+  - first:
+      23: 2300020
+    second: Church
+  - first:
+      23: 2300022
+    second: Glass Chur
+  - first:
+      23: 2300024
+    second: Glass KC10
+  - first:
+      23: 2300026
+    second: Glass2KC8B
+  - first:
+      23: 2300028
+    second: Glass2KC9B
+  - first:
+      23: 2300030
+    second: Glass3KC8B
+  - first:
+      23: 2300032
+    second: Glass4KC8B
+  - first:
+      23: 2300034
+    second: Glass5KC8B
+  - first:
+      23: 2300036
+    second: Glass6KC8B
+  - first:
+      23: 2300038
+    second: GlassBG27C
+  - first:
+      23: 2300040
+    second: GlassKC100
+  - first:
+      23: 2300042
+    second: GlassKC101
+  - first:
+      23: 2300044
+    second: GlassKC102
+  - first:
+      23: 2300046
+    second: GlassKC103
+  - first:
+      23: 2300048
+    second: GlassKC104
+  - first:
+      23: 2300050
+    second: GlassKC105
+  - first:
+      23: 2300052
+    second: GlassKC106
+  - first:
+      23: 2300054
+    second: GlassKC107
+  - first:
+      23: 2300056
+    second: GlassKC108
+  - first:
+      23: 2300058
+    second: GlassKC109
+  - first:
+      23: 2300060
+    second: GlassKC10B
+  - first:
+      23: 2300062
+    second: GlassKC110
+  - first:
+      23: 2300064
+    second: GlassKC111
+  - first:
+      23: 2300066
+    second: GlassKC112
+  - first:
+      23: 2300068
+    second: GlassKC2BG
+  - first:
+      23: 2300070
+    second: GlassKC3BG
+  - first:
+      23: 2300072
+    second: GlassKC4B0
+  - first:
+      23: 2300074
+    second: GlassKC4BG
+  - first:
+      23: 2300076
+    second: GlassKC5BG
+  - first:
+      23: 2300078
+    second: GlassKC6BG
+  - first:
+      23: 2300080
+    second: GlassKC7B0
+  - first:
+      23: 2300082
+    second: GlassKC7BG
+  - first:
+      23: 2300084
+    second: GlassKC8B0
+  - first:
+      23: 2300086
+    second: GlassKC8BG
+  - first:
+      23: 2300088
+    second: GlassKC9B0
+  - first:
+      23: 2300090
+    second: GlassKC9B1
+  - first:
+      23: 2300092
+    second: GlassKC9BG
+  - first:
+      23: 2300094
+    second: glassSolar
+  - first:
+      23: 2300096
+    second: KC10BG01
+  - first:
+      23: 2300098
+    second: KC10BG02
+  - first:
+      23: 2300100
+    second: KC10BG03
+  - first:
+      23: 2300102
+    second: KC10BG04
+  - first:
+      23: 2300104
+    second: KC10BG05
+  - first:
+      23: 2300106
+    second: KC10BG05b
+  - first:
+      23: 2300108
+    second: KC10BG06
+  - first:
+      23: 2300110
+    second: KC10BG10
+  - first:
+      23: 2300112
+    second: KC10BG14
+  - first:
+      23: 2300114
+    second: KC10BG15
+  - first:
+      23: 2300116
+    second: KC10BG17
+  - first:
+      23: 2300118
+    second: KC10BG22
+  - first:
+      23: 2300120
+    second: KC10BG24
+  - first:
+      23: 2300122
+    second: KC10BG30
+  - first:
+      23: 2300124
+    second: KC10BG32
+  - first:
+      23: 2300126
+    second: KC2BG20
+  - first:
+      23: 2300128
+    second: KC3BG13
+  - first:
+      23: 2300130
+    second: KC4BG16
+  - first:
+      23: 2300132
+    second: KC5BG21
+  - first:
+      23: 2300134
+    second: KC7BG10
+  - first:
+      23: 2300136
+    second: KC8BG06
+  - first:
+      23: 2300138
+    second: KC8BG06 de
+  - first:
+      23: 2300140
+    second: KC8BG15
+  - first:
+      23: 2300142
+    second: KC9BG03
+  - first:
+      23: 2300144
+    second: KC9BG19
+  - first:
+      23: 2300146
+    second: KC9BG19Bli
+  - first:
+      23: 2300148
+    second: Object01
+  - first:
+      33: 3300000
+    second: B court fe
+  - first:
+      33: 3300002
+    second: B court li
+  - first:
+      33: 3300004
+    second: Basketball
+  - first:
+      33: 3300006
+    second: BG10C1
+  - first:
+      33: 3300008
+    second: BG10C1Glas
+  - first:
+      33: 3300010
+    second: BG27bC1
+  - first:
+      33: 3300012
+    second: Block 1
+  - first:
+      33: 3300014
+    second: Block 4
+  - first:
+      33: 3300016
+    second: Block3
+  - first:
+      33: 3300018
+    second: Block4
+  - first:
+      33: 3300020
+    second: Church
+  - first:
+      33: 3300022
+    second: Glass Chur
+  - first:
+      33: 3300024
+    second: Glass KC10
+  - first:
+      33: 3300026
+    second: Glass2KC8B
+  - first:
+      33: 3300028
+    second: Glass2KC9B
+  - first:
+      33: 3300030
+    second: Glass3KC8B
+  - first:
+      33: 3300032
+    second: Glass4KC8B
+  - first:
+      33: 3300034
+    second: Glass5KC8B
+  - first:
+      33: 3300036
+    second: Glass6KC8B
+  - first:
+      33: 3300038
+    second: GlassBG27C
+  - first:
+      33: 3300040
+    second: GlassKC100
+  - first:
+      33: 3300042
+    second: GlassKC101
+  - first:
+      33: 3300044
+    second: GlassKC102
+  - first:
+      33: 3300046
+    second: GlassKC103
+  - first:
+      33: 3300048
+    second: GlassKC104
+  - first:
+      33: 3300050
+    second: GlassKC105
+  - first:
+      33: 3300052
+    second: GlassKC106
+  - first:
+      33: 3300054
+    second: GlassKC107
+  - first:
+      33: 3300056
+    second: GlassKC108
+  - first:
+      33: 3300058
+    second: GlassKC109
+  - first:
+      33: 3300060
+    second: GlassKC10B
+  - first:
+      33: 3300062
+    second: GlassKC110
+  - first:
+      33: 3300064
+    second: GlassKC111
+  - first:
+      33: 3300066
+    second: GlassKC112
+  - first:
+      33: 3300068
+    second: GlassKC2BG
+  - first:
+      33: 3300070
+    second: GlassKC3BG
+  - first:
+      33: 3300072
+    second: GlassKC4B0
+  - first:
+      33: 3300074
+    second: GlassKC4BG
+  - first:
+      33: 3300076
+    second: GlassKC5BG
+  - first:
+      33: 3300078
+    second: GlassKC6BG
+  - first:
+      33: 3300080
+    second: GlassKC7B0
+  - first:
+      33: 3300082
+    second: GlassKC7BG
+  - first:
+      33: 3300084
+    second: GlassKC8B0
+  - first:
+      33: 3300086
+    second: GlassKC8BG
+  - first:
+      33: 3300088
+    second: GlassKC9B0
+  - first:
+      33: 3300090
+    second: GlassKC9B1
+  - first:
+      33: 3300092
+    second: GlassKC9BG
+  - first:
+      33: 3300094
+    second: glassSolar
+  - first:
+      33: 3300096
+    second: KC10BG01
+  - first:
+      33: 3300098
+    second: KC10BG02
+  - first:
+      33: 3300100
+    second: KC10BG03
+  - first:
+      33: 3300102
+    second: KC10BG04
+  - first:
+      33: 3300104
+    second: KC10BG05
+  - first:
+      33: 3300106
+    second: KC10BG05b
+  - first:
+      33: 3300108
+    second: KC10BG06
+  - first:
+      33: 3300110
+    second: KC10BG10
+  - first:
+      33: 3300112
+    second: KC10BG14
+  - first:
+      33: 3300114
+    second: KC10BG15
+  - first:
+      33: 3300116
+    second: KC10BG17
+  - first:
+      33: 3300118
+    second: KC10BG22
+  - first:
+      33: 3300120
+    second: KC10BG24
+  - first:
+      33: 3300122
+    second: KC10BG30
+  - first:
+      33: 3300124
+    second: KC10BG32
+  - first:
+      33: 3300126
+    second: KC2BG20
+  - first:
+      33: 3300128
+    second: KC3BG13
+  - first:
+      33: 3300130
+    second: KC4BG16
+  - first:
+      33: 3300132
+    second: KC5BG21
+  - first:
+      33: 3300134
+    second: KC7BG10
+  - first:
+      33: 3300136
+    second: KC8BG06
+  - first:
+      33: 3300138
+    second: KC8BG06 de
+  - first:
+      33: 3300140
+    second: KC8BG15
+  - first:
+      33: 3300142
+    second: KC9BG03
+  - first:
+      33: 3300144
+    second: KC9BG19
+  - first:
+      33: 3300146
+    second: KC9BG19Bli
+  - first:
+      33: 3300148
+    second: Object01
+  - first:
+      43: 4300000
+    second: GlassKC4BG
+  - first:
+      43: 4300002
+    second: KC10BG01
+  - first:
+      43: 4300004
+    second: GlassKC10B
+  - first:
+      43: 4300006
+    second: KC10BG02
+  - first:
+      43: 4300008
+    second: GlassKC100
+  - first:
+      43: 4300010
+    second: KC10BG05
+  - first:
+      43: 4300012
+    second: GlassKC101
+  - first:
+      43: 4300014
+    second: KC10BG06
+  - first:
+      43: 4300016
+    second: GlassKC102
+  - first:
+      43: 4300018
+    second: KC10BG03
+  - first:
+      43: 4300020
+    second: GlassKC103
+  - first:
+      43: 4300022
+    second: KC10BG04
+  - first:
+      43: 4300024
+    second: GlassKC104
+  - first:
+      43: 4300026
+    second: KC10BG10
+  - first:
+      43: 4300028
+    second: GlassKC105
+  - first:
+      43: 4300030
+    second: KC10BG17
+  - first:
+      43: 4300032
+    second: GlassKC106
+  - first:
+      43: 4300034
+    second: KC10BG15
+  - first:
+      43: 4300036
+    second: GlassKC107
+  - first:
+      43: 4300038
+    second: KC10BG14
+  - first:
+      43: 4300040
+    second: GlassKC108
+  - first:
+      43: 4300042
+    second: Block 1
+  - first:
+      43: 4300044
+    second: Church
+  - first:
+      43: 4300046
+    second: Glass Chur
+  - first:
+      43: 4300048
+    second: KC10BG32
+  - first:
+      43: 4300050
+    second: Glass KC10
+  - first:
+      43: 4300052
+    second: KC10BG05b
+  - first:
+      43: 4300054
+    second: GlassKC109
+  - first:
+      43: 4300056
+    second: Block 4
+  - first:
+      43: 4300058
+    second: KC10BG24
+  - first:
+      43: 4300060
+    second: GlassKC110
+  - first:
+      43: 4300062
+    second: KC10BG22
+  - first:
+      43: 4300064
+    second: GlassKC111
+  - first:
+      43: 4300066
+    second: KC8BG15
+  - first:
+      43: 4300068
+    second: GlassKC8BG
+  - first:
+      43: 4300070
+    second: Glass3KC8B
+  - first:
+      43: 4300072
+    second: Glass2KC8B
+  - first:
+      43: 4300074
+    second: Glass5KC8B
+  - first:
+      43: 4300076
+    second: Glass6KC8B
+  - first:
+      43: 4300078
+    second: Glass4KC8B
+  - first:
+      43: 4300080
+    second: KC10BG30
+  - first:
+      43: 4300082
+    second: GlassKC112
+  - first:
+      43: 4300084
+    second: Block4
+  - first:
+      43: 4300086
+    second: GlassKC7BG
+  - first:
+      43: 4300088
+    second: GlassKC6BG
+  - first:
+      43: 4300090
+    second: KC8BG06
+  - first:
+      43: 4300092
+    second: GlassKC8B0
+  - first:
+      43: 4300094
+    second: KC9BG03
+  - first:
+      43: 4300096
+    second: GlassKC9BG
+  - first:
+      43: 4300098
+    second: BG27bC1
+  - first:
+      43: 4300100
+    second: GlassBG27C
+  - first:
+      43: 4300102
+    second: KC2BG20
+  - first:
+      43: 4300104
+    second: GlassKC2BG
+  - first:
+      43: 4300106
+    second: glassSolar
+  - first:
+      43: 4300108
+    second: GlassKC9B0
+  - first:
+      43: 4300110
+    second: KC5BG21
+  - first:
+      43: 4300112
+    second: GlassKC5BG
+  - first:
+      43: 4300114
+    second: Block3
+  - first:
+      43: 4300116
+    second: BG10C1
+  - first:
+      43: 4300118
+    second: BG10C1Glas
+  - first:
+      43: 4300120
+    second: KC4BG16
+  - first:
+      43: 4300122
+    second: GlassKC4B0
+  - first:
+      43: 4300124
+    second: KC3BG13
+  - first:
+      43: 4300126
+    second: GlassKC3BG
+  - first:
+      43: 4300128
+    second: GlassKC7B0
+  - first:
+      43: 4300130
+    second: KC7BG10
+  - first:
+      43: 4300132
+    second: KC8BG06 de
+  - first:
+      43: 4300134
+    second: B court li
+  - first:
+      43: 4300136
+    second: Basketball
+  - first:
+      43: 4300138
+    second: B court fe
+  - first:
+      43: 4300140
+    second: KC9BG19
+  - first:
+      43: 4300142
+    second: Glass2KC9B
+  - first:
+      43: 4300144
+    second: GlassKC9B1
+  - first:
+      43: 4300146
+    second: KC9BG19Bli
+  - first:
+      43: 4300148
+    second: Object01
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default10
+    second: {fileID: 2100000, guid: 3f303e18100c5434bafd723e1bda445b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default11
+    second: {fileID: 2100000, guid: dcbc152d2a0c1bf419448bf62d25e1c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default12
+    second: {fileID: 2100000, guid: 84bbe7530d5462d42b4917ca1087ec47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default13
+    second: {fileID: 2100000, guid: b8b154cd7a7708e49b0ed380c7bd56b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default14
+    second: {fileID: 2100000, guid: c4dee149dff3a4d4795a7d99476e780b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default15
+    second: {fileID: 2100000, guid: 98131cf657828d441a266f39c8813df2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default16
+    second: {fileID: 2100000, guid: 0cf34ebf236df51409507d5ec74412cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default7
+    second: {fileID: 2100000, guid: a2299e37c2df3324aa553190925731b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default8
+    second: {fileID: 2100000, guid: 731b44bf828ca6c4ca6af383e0e850ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default9
+    second: {fileID: 2100000, guid: 5d962c4345d119a4bbc4ae5ae5ad056e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default10
+    second: {fileID: 2100000, guid: 0e37bd7027559394ebe5073f50d9b9a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default11
+    second: {fileID: 2100000, guid: c8b25e3a5b461fa45b05d784b4b0453f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default12
+    second: {fileID: 2100000, guid: 88b24b5c667c4404b916c3615dd4156f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default13
+    second: {fileID: 2100000, guid: 894fb4f2dc64e57468b367b0aafdf93d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default14
+    second: {fileID: 2100000, guid: 44124417231c6d34f99aa827281bedad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default15
+    second: {fileID: 2100000, guid: c11e9046e096b5a4398144eb4204dafc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default16
+    second: {fileID: 2100000, guid: 47f191680b1df044eacca8508a41c71b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default4
+    second: {fileID: 2100000, guid: b5ff09175057f3541b727498fb013134, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default5
+    second: {fileID: 2100000, guid: 3d96de4ba49b610469b8e5913b476c97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default6
+    second: {fileID: 2100000, guid: 6b5a110ef91ceee43ac71801d86a6132, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default7
+    second: {fileID: 2100000, guid: 1417080b2c4b27743b119e738b17257b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default8
+    second: {fileID: 2100000, guid: 11c557371ac0780449525ed1fe0c940d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default9
+    second: {fileID: 2100000, guid: 8284dd3f520247e48a629b4838df5a51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default1
+    second: {fileID: 2100000, guid: b4e0365ad69897c49a719a8f9bff9b32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default10
+    second: {fileID: 2100000, guid: 7b803d135ec709c4cb5bde11079a2d27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default11
+    second: {fileID: 2100000, guid: 7d613ab18d8da4a4d9cba140229fe823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default2
+    second: {fileID: 2100000, guid: 59e67516fd9e607468079d2352b80eb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default3
+    second: {fileID: 2100000, guid: 7e577b2f2aa7cf64dba4c41e15d2810b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default4
+    second: {fileID: 2100000, guid: ad8ab0c7874b2ad4fb0ab27e9932f16c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default5
+    second: {fileID: 2100000, guid: c4a7ed6866638134d9bb92936b78637b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default6
+    second: {fileID: 2100000, guid: 338a4c470fd2b664da0cc54d344c4ae4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default7
+    second: {fileID: 2100000, guid: 4e56d2e5196611b4d893d85903db6e81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default8
+    second: {fileID: 2100000, guid: 907e32c099a0e024eaae68b6aa3a7fc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default9
+    second: {fileID: 2100000, guid: 9e491c274a01a1748856e1f673cfc44c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default10
+    second: {fileID: 2100000, guid: adb572b305af0ec4a826f86bfb674305, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default11
+    second: {fileID: 2100000, guid: 46a70122bba2aaf4093e2eb3b4018421, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default2
+    second: {fileID: 2100000, guid: 3087c46fe5d84a34e911c8fbaafbb323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default3
+    second: {fileID: 2100000, guid: 282cf19227beddc4b9f40f4eddbb73aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default4
+    second: {fileID: 2100000, guid: 3bafbcdf543152c418665ac712ef7765, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default5
+    second: {fileID: 2100000, guid: cc070330e7228ad44a2529fc06553a28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default6
+    second: {fileID: 2100000, guid: 8bf3779662794c944867b64a5f2ca706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default7
+    second: {fileID: 2100000, guid: 1f184a1f34e53ef44a1f5b68a1ba5d58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default8
+    second: {fileID: 2100000, guid: 92905261b3ac40342ba332a28335580b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default9
+    second: {fileID: 2100000, guid: d97fe2baf069a8943bbdd5f8f9badef3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default10
+    second: {fileID: 2100000, guid: 05c69d794c7d48545adabe18511eae6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default11
+    second: {fileID: 2100000, guid: 32d2d158a0d3a86468a8c16be259cf18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default12
+    second: {fileID: 2100000, guid: 5b264aa282767ec4a90008749cd50b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default3
+    second: {fileID: 2100000, guid: 9403425d935db8946a2ba91f710c40df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default4
+    second: {fileID: 2100000, guid: 8d0d8e3f6dcd1d54e9c03208a962c9f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default5
+    second: {fileID: 2100000, guid: b5a44443072f0e84bb53280a2aeda6c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default6
+    second: {fileID: 2100000, guid: e24dd56e1617d1f4a895817ef2f168bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default7
+    second: {fileID: 2100000, guid: d5b3868bb7f63884f9caca6d3fc29526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default8
+    second: {fileID: 2100000, guid: b643dcbb91d3b6f40888f7554a5cdf1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default9
+    second: {fileID: 2100000, guid: 40dc6db0e8f5f1f4db69a043861c5f7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default1
+    second: {fileID: 2100000, guid: 41f3f5ba48277ae498a6e4afa9b145e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default10
+    second: {fileID: 2100000, guid: a4e25eedaa2bf0140b2b2f5723dc9b08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default11
+    second: {fileID: 2100000, guid: ec629a49fd4de1b42957ccd1aebc4dfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default2
+    second: {fileID: 2100000, guid: 4d8b811699fc67044a86eed89717757b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default3
+    second: {fileID: 2100000, guid: 52108f590b7ebae488f4641d63ceae61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default4
+    second: {fileID: 2100000, guid: 9c724c97568accd40ba348d4f169e6ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default5
+    second: {fileID: 2100000, guid: 113af4e839d14fc4ca131ec37a1c5fb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default6
+    second: {fileID: 2100000, guid: 922d23b00ea5fc742bd720bbecaf0ef2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default7
+    second: {fileID: 2100000, guid: 83e24e1c91f2a01459b5e96d0bdf3612, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default8
+    second: {fileID: 2100000, guid: c8fc4ef6af095ea469de7b5930f7dc5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default9
+    second: {fileID: 2100000, guid: 542db63c046ee364f9757c5c0115c42e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 50e21b6030ccff34a911cbfeb6796905, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default1
+    second: {fileID: 2100000, guid: 6388d39e281bd224caedf5fefb22a332, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default10
+    second: {fileID: 2100000, guid: ca82dda94b78cc24f83b540c139c21ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default2
+    second: {fileID: 2100000, guid: f3b112f4020408244bc86aed00fea5b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default3
+    second: {fileID: 2100000, guid: 147b218827ef20a4c8d22808764b65e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default4
+    second: {fileID: 2100000, guid: 7d7bde8872381894ea2a54c50231a839, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default5
+    second: {fileID: 2100000, guid: 3f6b5ef144b6a2b40944a7455780bef5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default6
+    second: {fileID: 2100000, guid: 373db80f2d5b38e4390866fa1115fd10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default7
+    second: {fileID: 2100000, guid: e00fbfea715a18f47b6677418e79d9fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default8
+    second: {fileID: 2100000, guid: 53dfad3b1ca59eb42963993cd0ce7cb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default9
+    second: {fileID: 2100000, guid: 771fa1c522288bf4c8da29b504223588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default
+    second: {fileID: 2100000, guid: b387a53edd0cada4f9f9d025577ebe3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default1
+    second: {fileID: 2100000, guid: a7a0234624bd1c942a08617545ddd893, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default10
+    second: {fileID: 2100000, guid: 58c05acfed01fc64f99f42f75c36aad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default2
+    second: {fileID: 2100000, guid: 8d427d17c260a5f43bb57c5d097ca3e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default3
+    second: {fileID: 2100000, guid: 659f21f76e64ca844a076ad051c5ac4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default4
+    second: {fileID: 2100000, guid: 756d38319b254bf449e8bf681410c55c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default5
+    second: {fileID: 2100000, guid: ca02f6b79db43a7459ee5decf278e05b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default6
+    second: {fileID: 2100000, guid: c8e98f0b9a37c56428b2c813a7deef0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default7
+    second: {fileID: 2100000, guid: 4de6ef9b255066340bc200ac99e86405, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default8
+    second: {fileID: 2100000, guid: 574d201a071198e4384a1ca6db7469d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default9
+    second: {fileID: 2100000, guid: 7dd96b68f65a02b448d05484411eb471, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default
+    second: {fileID: 2100000, guid: cb8c3197ce11fe44ba8509ebea3aba88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default1
+    second: {fileID: 2100000, guid: bbdbb709de79cd44db4f9aca10dee670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default2
+    second: {fileID: 2100000, guid: 97f386afe5124ca48bfc7b3b3de55afd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default3
+    second: {fileID: 2100000, guid: cbc88e898e313c74ebbb74d844f08cca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default4
+    second: {fileID: 2100000, guid: f163c919635498742a070b6f6717d7a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default5
+    second: {fileID: 2100000, guid: 4d764118bd7d90b439ffdc34b5a5fccc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default6
+    second: {fileID: 2100000, guid: 550627f2582db9e44b95f3925dec0d92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default7
+    second: {fileID: 2100000, guid: d240d3dfbce19fd48aa98752d6ed20e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default8
+    second: {fileID: 2100000, guid: f79595ff468ba1f408d23b554622c325, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default9
+    second: {fileID: 2100000, guid: 9b07f84f9e066b84ab7bfd59d0960f5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default
+    second: {fileID: 2100000, guid: 325e4cc67de52bb41a802aca71e9b90e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default1
+    second: {fileID: 2100000, guid: a954eca501a74c148975da6e58dd735d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 - Default2
+    second: {fileID: 2100000, guid: d58353583f9b8e74db9afb5c1b3cebe1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass18reflectio
+    second: {fileID: 2100000, guid: 8fcdaa3f93e662d40bf77981ac5d77d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #114
+    second: {fileID: 2100000, guid: 0f209c4e3cddcad4e9545d5871e08c17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #115
+    second: {fileID: 2100000, guid: af3a73c38d61e4048828b17c9322ba62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #116
+    second: {fileID: 2100000, guid: 1985858eb9ba14e41a59427dff3d619c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #261
+    second: {fileID: 2100000, guid: a8012d1faddf52d4da2dc1465d4fb027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #262
+    second: {fileID: 2100000, guid: 23bf3ee3e5282f341b98fb82512d4986, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #272
+    second: {fileID: 2100000, guid: 3a1e2957fe08dbb42b7749e337e637ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #37
+    second: {fileID: 2100000, guid: 20073dc828d61a843810128d0e7a2985, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #374
+    second: {fileID: 2100000, guid: 905708f22960134438b58e6f9527c2ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #38
+    second: {fileID: 2100000, guid: 43dc1607db1375c4f8c69d73f706c4e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #39
+    second: {fileID: 2100000, guid: 2fa4b181eacd6204fa0034134ac4263b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #391
+    second: {fileID: 2100000, guid: 4ea7a064066e7104497c263132993a04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #40
+    second: {fileID: 2100000, guid: 265a646dda5378c4981c0c261b2afb76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #47
+    second: {fileID: 2100000, guid: 48f6081b87f3e344bbe675dca7b708ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #48
+    second: {fileID: 2100000, guid: 63a5c1fbc4ca4ce4e8bcc7ed96a80949, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #491
+    second: {fileID: 2100000, guid: 0b18bb9e7420aba4aa216bb2fa71aa89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #50
+    second: {fileID: 2100000, guid: 4b377b30845a7b2498cd2181338c9658, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #52
+    second: {fileID: 2100000, guid: fc01b3951f4f3e44f91a0451f5a5bdb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #53
+    second: {fileID: 2100000, guid: d55b5e7cdd0ff7647a6c95f7195a42f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #581
+    second: {fileID: 2100000, guid: 1a00112bd90ea5e4aaa7fc55f726c1c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #64
+    second: {fileID: 2100000, guid: ff5c80946a103a2428a8dc38a4e472fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #76
+    second: {fileID: 2100000, guid: 267ec9517ca7610409c3b019be62d422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #80
+    second: {fileID: 2100000, guid: 3006c0dd9190da141bafbe7460b74bac, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

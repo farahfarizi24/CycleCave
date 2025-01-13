@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: feffd2ab77b3d9c4b8c1e500d7b3ccfe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277301
+  packageName: Mobile Traffic System v2.0
+  packageVersion: 2.1.1
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Editor/Connections/RoadConnections.cs
+  uploadId: 653948

@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: ca4d73b2d30a50445b980704206354ac
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: B court fence
+    100002: B court lights
+    100004: Basketball court
+    100006: BG10C1
+    100008: BG10C1Glass
+    100010: BG27bC1
+    100012: Block 1
+    100014: Block 1 plants
+    100016: Block 1 Street details
+    100018: Block 4
+    100020: Block 4 details
+    100022: Block 4 Plants
+    100024: Block 4 Plants 2
+    100026: Block 4 Trees
+    100028: Block1 Trees
+    100030: Block1StreetDetails01
+    100032: Block3
+    100034: Block4
+    100036: Block4 details
+    100038: Church
+    100040: Glass Church
+    100042: Glass KC10BG32
+    100044: Glass2KC8BG15
+    100046: Glass2KC9BG19
+    100048: Glass3KC8BG15
+    100050: Glass4KC8BG15
+    100052: Glass5KC8BG15
+    100054: Glass6KC8BG15
+    100056: GlassBG27C1
+    100058: GlassKC10BG01
+    100060: GlassKC10BG02
+    100062: GlassKC10BG03
+    100064: GlassKC10BG04
+    100066: GlassKC10BG05
+    100068: GlassKC10BG05b
+    100070: GlassKC10BG07
+    100072: GlassKC10BG10
+    100074: GlassKC10BG14
+    100076: GlassKC10BG15
+    100078: GlassKC10BG17
+    100080: GlassKC10BG22
+    100082: GlassKC10BG24
+    100084: GlassKC10BG30
+    100086: GlassKC2BG20
+    100088: GlassKC3BG13
+    100090: GlassKC4BG06
+    100092: GlassKC4BG16
+    100094: GlassKC5BG21
+    100096: GlassKC6BG16
+    100098: GlassKC7BG10
+    100100: GlassKC7BG17
+    100102: GlassKC8BG06
+    100104: GlassKC8BG15
+    100106: GlassKC9BG03
+    100108: GlassKC9BG19
+    100110: GlassKC9BG21
+    100112: glassSolar panels
+    100114: KC10BG01
+    100116: KC10BG02
+    100118: KC10BG03
+    100120: KC10BG04
+    100122: KC10BG05
+    100124: KC10BG05b
+    100126: KC10BG06
+    100128: KC10BG10
+    100130: KC10BG14
+    100132: KC10BG15
+    100134: KC10BG17
+    100136: KC10BG22
+    100138: KC10BG24
+    100140: KC10BG30
+    100142: KC10BG32
+    100144: //RootNode
+    100146: KC2BG20
+    100148: KC3BG13
+    100150: KC4BG06
+    100152: KC4BG16
+    100154: KC5BG21
+    100156: KC6BG16
+    100158: KC7BG10
+    100160: KC8BG06
+    100162: KC8BG06 detail
+    100164: KC8BG15
+    100166: KC9BG03
+    100168: KC9BG19
+    100170: KC9BG19Blinds
+    100172: KC9BG21
+    100174: Object01
+    400000: B court fence
+    400002: B court lights
+    400004: Basketball court
+    400006: BG10C1
+    400008: BG10C1Glass
+    400010: BG27bC1
+    400012: Block 1
+    400014: Block 1 plants
+    400016: Block 1 Street details
+    400018: Block 4
+    400020: Block 4 details
+    400022: Block 4 Plants
+    400024: Block 4 Plants 2
+    400026: Block 4 Trees
+    400028: Block1 Trees
+    400030: Block1StreetDetails01
+    400032: Block3
+    400034: Block4
+    400036: Block4 details
+    400038: Church
+    400040: Glass Church
+    400042: Glass KC10BG32
+    400044: Glass2KC8BG15
+    400046: Glass2KC9BG19
+    400048: Glass3KC8BG15
+    400050: Glass4KC8BG15
+    400052: Glass5KC8BG15
+    400054: Glass6KC8BG15
+    400056: GlassBG27C1
+    400058: GlassKC10BG01
+    400060: GlassKC10BG02
+    400062: GlassKC10BG03
+    400064: GlassKC10BG04
+    400066: GlassKC10BG05
+    400068: GlassKC10BG05b
+    400070: GlassKC10BG07
+    400072: GlassKC10BG10
+    400074: GlassKC10BG14
+    400076: GlassKC10BG15
+    400078: GlassKC10BG17
+    400080: GlassKC10BG22
+    400082: GlassKC10BG24
+    400084: GlassKC10BG30
+    400086: GlassKC2BG20
+    400088: GlassKC3BG13
+    400090: GlassKC4BG06
+    400092: GlassKC4BG16
+    400094: GlassKC5BG21
+    400096: GlassKC6BG16
+    400098: GlassKC7BG10
+    400100: GlassKC7BG17
+    400102: GlassKC8BG06
+    400104: GlassKC8BG15
+    400106: GlassKC9BG03
+    400108: GlassKC9BG19
+    400110: GlassKC9BG21
+    400112: glassSolar panels
+    400114: KC10BG01
+    400116: KC10BG02
+    400118: KC10BG03
+    400120: KC10BG04
+    400122: KC10BG05
+    400124: KC10BG05b
+    400126: KC10BG06
+    400128: KC10BG10
+    400130: KC10BG14
+    400132: KC10BG15
+    400134: KC10BG17
+    400136: KC10BG22
+    400138: KC10BG24
+    400140: KC10BG30
+    400142: KC10BG32
+    400144: //RootNode
+    400146: KC2BG20
+    400148: KC3BG13
+    400150: KC4BG06
+    400152: KC4BG16
+    400154: KC5BG21
+    400156: KC6BG16
+    400158: KC7BG10
+    400160: KC8BG06
+    400162: KC8BG06 detail
+    400164: KC8BG15
+    400166: KC9BG03
+    400168: KC9BG19
+    400170: KC9BG19Blinds
+    400172: KC9BG21
+    400174: Object01
+    2100000: 03 - Default
+    2100002: 01 - Default
+    2100004: 02 - Default
+    2100006: 07 - Default
+    2100008: 'Material #31'
+    2100010: 08 - Default
+    2100012: 'Material #29'
+    2100014: 09 - Default
+    2100016: 'Material #46'
+    2100018: 'Material #27'
+    2100020: 'Material #26'
+    2100022: 'Material #58'
+    2100024: 'Material #49'
+    2100026: Glass18reflection
+    2100028: 13 - Default
+    2100030: 19 - Default
+    2100032: 'Material #76'
+    2100034: 'Material #80'
+    2100036: 14 - Default
+    2100038: 15 - Default
+    2100040: 'Material #48'
+    2100042: 'Material #50'
+    2100044: 'Material #37'
+    2100046: 'Material #38'
+    2100048: 'Material #39'
+    2100050: 'Material #114'
+    2100052: 'Material #115'
+    2100054: 'Material #116'
+    2100056: 'Material #47'
+    2100058: 'Material #52'
+    2100060: 'Material #53'
+    2100062: 'Material #40'
+    2100064: 'Material #64'
+    2100066: 'Material #374'
+    2100068: 'Material #144'
+    2100070: 'Material #210'
+    2100072: 06 - Default
+    2100074: 'Material #25'
+    2100076: 20 - Default
+    2100078: 'Material #95'
+    2100080: 'Material #277'
+    2100082: 21 - Default
+    2100084: 'Material #30'
+    2100086: 'Material #7'
+    2100088: 'Material #15'
+    2100090: 'Material #19'
+    2100092: 22 - Default
+    2100094: 16 - Default
+    2100096: 'Material #44'
+    2100098: 'Material #41'
+    2100100: 'Material #12772'
+    2100102: 23 - Default
+    2100104: awd
+    2100106: 'Material #1038'
+    2100108: 'Material #55'
+    2100110: 'Material #415'
+    2100112: Glass80eflection
+    2100114: 10 - Default
+    2100116: 04 - Default
+    2100118: 'Material #2487'
+    2100120: Glass35reflection
+    2100122: 'Material #59'
+    2100124: 'Material #193'
+    2100126: 'Material #21124'
+    2100128: 'Material #113'
+    2100130: 'Material #218'
+    2100132: 'Material #28'
+    2100134: 'Material #32'
+    2100136: 'Material #135'
+    2100138: 'Material #136'
+    2100140: 'Material #137'
+    2100142: 12 - Default
+    2100144: 05 - Default
+    2100146: 11 - Default
+    2100148: 'Material #232'
+    2100150: Default
+    2100152: 'Material #267'
+    2100154: 'Material #36'
+    2100156: 'Material #284'
+    2100158: 'Material #132'
+    2100160: 'Material #207'
+    2100162: 'Material #273'
+    2100164: 'Material #347'
+    2100166: 'Material #0'
+    2100168: comms
+    2100170: 'Material #1788'
+    2100172: 'Material #1789'
+    2100174: 'Material #211'
+    2100176: 'Material #11513'
+    2100178: 'Material #11515'
+    2100180: 'Material #11514'
+    2100182: 'Material #100'
+    2100184: No Name
+    2300000: B court fence
+    2300002: B court lights
+    2300004: Basketball court
+    2300006: BG10C1
+    2300008: BG10C1Glass
+    2300010: BG27bC1
+    2300012: Block 1
+    2300014: Block 1 plants
+    2300016: Block 1 Street details
+    2300018: Block 4
+    2300020: Block 4 details
+    2300022: Block 4 Plants
+    2300024: Block 4 Plants 2
+    2300026: Block 4 Trees
+    2300028: Block1 Trees
+    2300030: Block1StreetDetails01
+    2300032: Block3
+    2300034: Block4
+    2300036: Block4 details
+    2300038: Church
+    2300040: Glass Church
+    2300042: Glass KC10BG32
+    2300044: Glass2KC8BG15
+    2300046: Glass2KC9BG19
+    2300048: Glass3KC8BG15
+    2300050: Glass4KC8BG15
+    2300052: Glass5KC8BG15
+    2300054: Glass6KC8BG15
+    2300056: GlassBG27C1
+    2300058: GlassKC10BG01
+    2300060: GlassKC10BG02
+    2300062: GlassKC10BG03
+    2300064: GlassKC10BG04
+    2300066: GlassKC10BG05
+    2300068: GlassKC10BG05b
+    2300070: GlassKC10BG07
+    2300072: GlassKC10BG10
+    2300074: GlassKC10BG14
+    2300076: GlassKC10BG15
+    2300078: GlassKC10BG17
+    2300080: GlassKC10BG22
+    2300082: GlassKC10BG24
+    2300084: GlassKC10BG30
+    2300086: GlassKC2BG20
+    2300088: GlassKC3BG13
+    2300090: GlassKC4BG06
+    2300092: GlassKC4BG16
+    2300094: GlassKC5BG21
+    2300096: GlassKC6BG16
+    2300098: GlassKC7BG10
+    2300100: GlassKC7BG17
+    2300102: GlassKC8BG06
+    2300104: GlassKC8BG15
+    2300106: GlassKC9BG03
+    2300108: GlassKC9BG19
+    2300110: GlassKC9BG21
+    2300112: glassSolar panels
+    2300114: KC10BG01
+    2300116: KC10BG02
+    2300118: KC10BG03
+    2300120: KC10BG04
+    2300122: KC10BG05
+    2300124: KC10BG05b
+    2300126: KC10BG06
+    2300128: KC10BG10
+    2300130: KC10BG14
+    2300132: KC10BG15
+    2300134: KC10BG17
+    2300136: KC10BG22
+    2300138: KC10BG24
+    2300140: KC10BG30
+    2300142: KC10BG32
+    2300144: KC2BG20
+    2300146: KC3BG13
+    2300148: KC4BG06
+    2300150: KC4BG16
+    2300152: KC5BG21
+    2300154: KC6BG16
+    2300156: KC7BG10
+    2300158: KC8BG06
+    2300160: KC8BG06 detail
+    2300162: KC8BG15
+    2300164: KC9BG03
+    2300166: KC9BG19
+    2300168: KC9BG19Blinds
+    2300170: KC9BG21
+    2300172: Object01
+    3300000: B court fence
+    3300002: B court lights
+    3300004: Basketball court
+    3300006: BG10C1
+    3300008: BG10C1Glass
+    3300010: BG27bC1
+    3300012: Block 1
+    3300014: Block 1 plants
+    3300016: Block 1 Street details
+    3300018: Block 4
+    3300020: Block 4 details
+    3300022: Block 4 Plants
+    3300024: Block 4 Plants 2
+    3300026: Block 4 Trees
+    3300028: Block1 Trees
+    3300030: Block1StreetDetails01
+    3300032: Block3
+    3300034: Block4
+    3300036: Block4 details
+    3300038: Church
+    3300040: Glass Church
+    3300042: Glass KC10BG32
+    3300044: Glass2KC8BG15
+    3300046: Glass2KC9BG19
+    3300048: Glass3KC8BG15
+    3300050: Glass4KC8BG15
+    3300052: Glass5KC8BG15
+    3300054: Glass6KC8BG15
+    3300056: GlassBG27C1
+    3300058: GlassKC10BG01
+    3300060: GlassKC10BG02
+    3300062: GlassKC10BG03
+    3300064: GlassKC10BG04
+    3300066: GlassKC10BG05
+    3300068: GlassKC10BG05b
+    3300070: GlassKC10BG07
+    3300072: GlassKC10BG10
+    3300074: GlassKC10BG14
+    3300076: GlassKC10BG15
+    3300078: GlassKC10BG17
+    3300080: GlassKC10BG22
+    3300082: GlassKC10BG24
+    3300084: GlassKC10BG30
+    3300086: GlassKC2BG20
+    3300088: GlassKC3BG13
+    3300090: GlassKC4BG06
+    3300092: GlassKC4BG16
+    3300094: GlassKC5BG21
+    3300096: GlassKC6BG16
+    3300098: GlassKC7BG10
+    3300100: GlassKC7BG17
+    3300102: GlassKC8BG06
+    3300104: GlassKC8BG15
+    3300106: GlassKC9BG03
+    3300108: GlassKC9BG19
+    3300110: GlassKC9BG21
+    3300112: glassSolar panels
+    3300114: KC10BG01
+    3300116: KC10BG02
+    3300118: KC10BG03
+    3300120: KC10BG04
+    3300122: KC10BG05
+    3300124: KC10BG05b
+    3300126: KC10BG06
+    3300128: KC10BG10
+    3300130: KC10BG14
+    3300132: KC10BG15
+    3300134: KC10BG17
+    3300136: KC10BG22
+    3300138: KC10BG24
+    3300140: KC10BG30
+    3300142: KC10BG32
+    3300144: KC2BG20
+    3300146: KC3BG13
+    3300148: KC4BG06
+    3300150: KC4BG16
+    3300152: KC5BG21
+    3300154: KC6BG16
+    3300156: KC7BG10
+    3300158: KC8BG06
+    3300160: KC8BG06 detail
+    3300162: KC8BG15
+    3300164: KC9BG03
+    3300166: KC9BG19
+    3300168: KC9BG19Blinds
+    3300170: KC9BG21
+    3300172: Object01
+    4300000: KC4BG06
+    4300002: GlassKC4BG06
+    4300004: KC10BG01
+    4300006: GlassKC10BG01
+    4300008: KC10BG02
+    4300010: GlassKC10BG02
+    4300012: KC10BG05
+    4300014: GlassKC10BG05
+    4300016: KC10BG06
+    4300018: GlassKC10BG03
+    4300020: KC10BG03
+    4300022: GlassKC10BG04
+    4300024: KC10BG04
+    4300026: GlassKC10BG07
+    4300028: KC10BG10
+    4300030: GlassKC10BG10
+    4300032: KC10BG17
+    4300034: GlassKC10BG17
+    4300036: KC10BG15
+    4300038: GlassKC10BG15
+    4300040: KC10BG14
+    4300042: GlassKC10BG14
+    4300044: Block 1 Street details
+    4300046: Block 1 plants
+    4300048: Block 1
+    4300050: Church
+    4300052: Glass Church
+    4300054: KC10BG32
+    4300056: Glass KC10BG32
+    4300058: KC10BG05b
+    4300060: GlassKC10BG05b
+    4300062: Block 4
+    4300064: KC10BG24
+    4300066: GlassKC10BG24
+    4300068: KC10BG22
+    4300070: GlassKC10BG22
+    4300072: Block 4 details
+    4300074: Block 4 Plants
+    4300076: Block 4 Plants 2
+    4300078: KC8BG15
+    4300080: GlassKC8BG15
+    4300082: Glass3KC8BG15
+    4300084: Glass2KC8BG15
+    4300086: Glass5KC8BG15
+    4300088: Glass6KC8BG15
+    4300090: Glass4KC8BG15
+    4300092: KC10BG30
+    4300094: GlassKC10BG30
+    4300096: Block4
+    4300098: GlassKC7BG17
+    4300100: KC6BG16
+    4300102: GlassKC6BG16
+    4300104: KC8BG06
+    4300106: GlassKC8BG06
+    4300108: KC9BG03
+    4300110: GlassKC9BG03
+    4300112: BG27bC1
+    4300114: GlassBG27C1
+    4300116: KC2BG20
+    4300118: GlassKC2BG20
+    4300120: glassSolar panels
+    4300122: KC9BG21
+    4300124: GlassKC9BG21
+    4300126: Block4 details
+    4300128: Block 4 Trees
+    4300130: KC5BG21
+    4300132: GlassKC5BG21
+    4300134: Block3
+    4300136: Block1StreetDetails01
+    4300138: Block1 Trees
+    4300140: BG10C1
+    4300142: BG10C1Glass
+    4300144: KC4BG16
+    4300146: GlassKC4BG16
+    4300148: KC3BG13
+    4300150: GlassKC3BG13
+    4300152: GlassKC7BG10
+    4300154: KC7BG10
+    4300156: KC8BG06 detail
+    4300158: B court lights
+    4300160: Basketball court
+    4300162: B court fence
+    4300164: KC9BG19
+    4300166: Glass2KC9BG19
+    4300168: GlassKC9BG19
+    4300170: KC9BG19Blinds
+    4300172: Object01
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

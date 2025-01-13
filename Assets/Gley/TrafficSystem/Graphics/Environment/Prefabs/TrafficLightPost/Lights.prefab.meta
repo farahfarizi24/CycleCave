@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7c3e8cc1e14b32a4c809b2f34e39e314
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277301
+  packageName: Mobile Traffic System v2.0
+  packageVersion: 2.1.1
+  assetPath: Assets/Gley/TrafficSystem/Graphics/Environment/Prefabs/TrafficLightPost/Lights.prefab
+  uploadId: 653948

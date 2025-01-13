@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6846495980c41654fbad936f7bc3745e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277301
+  packageName: Mobile Traffic System v2.0
+  packageVersion: 2.1.1
+  assetPath: Assets/Gley/TrafficSystem/Scripts/Internal/Traffic/Pathfinding/PathFinding.cs
+  uploadId: 653948

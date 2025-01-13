@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2f7cc936ebfa28e4b89b9eca7437de9b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277301
+  packageName: Mobile Traffic System v2.0
+  packageVersion: 2.1.1
+  assetPath: Assets/Gley/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintYellow2.mat
+  uploadId: 653948

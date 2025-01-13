@@ -8500,16 +8500,15 @@ MonoBehaviour:
   bottom_button: {fileID: 1514140463}
   right_button: {fileID: 786489481}
   left_button: {fileID: 37133833}
+  top_button: {fileID: 0}
   create_session: {fileID: 1211581999}
   join_session: {fileID: 1369099597}
-  camera_x: {fileID: 2095995107}
-  camera_y: {fileID: 1833238967}
-  camera_W: {fileID: 2056664272}
-  camera_H: {fileID: 820190005}
-  camera_apply: {fileID: 1878007590}
-  viewportPanel: {fileID: 1394468613}
+  animator_fading: {fileID: 0}
   currentScreen: 0
   sessionid: 
+  cameraCount: 0
+  availableScenes: 01000000020000000300000004000000
+  movementDisabled: 0
 --- !u!4 &926501005
 Transform:
   m_ObjectHideFlags: 0
@@ -16865,7 +16864,8 @@ MonoBehaviour:
   - screen: 3
     Camera: {fileID: 421989882}
   cameraMoveSpeed: 5
-  cameraRotationSpeed: 5
+  rotationSpeed: 2
+  waypoints: []
 --- !u!114 &1789524519
 MonoBehaviour:
   m_ObjectHideFlags: 0

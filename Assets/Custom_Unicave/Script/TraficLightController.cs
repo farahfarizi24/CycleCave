@@ -1,43 +1,55 @@
-using System.Collections;
 using UnityEngine;
 
-public class TraficLightController : MonoBehaviour
+public class TrafficLightController : MonoBehaviour
 {
+    public enum SignalState
+    {
+        Red,
+        Yellow,
+        Green
+    }
+
+    public SignalState CurrentState { get; private set; } = SignalState.Red;
+
     public GameObject greenLight;
     public GameObject yellowLight;
     public GameObject redLight;
 
-    // Duration for each light in seconds
-    public float greenLightDuration = 10f;
-    public float yellowLightDuration = 3f;
-    public float redLightDuration = 10f;
+    public float greenLightDuration = 10f; // Duration for the green light
 
-    private IEnumerator Start()
+    private void Start()
     {
-        while (true)
-        {
-            // Green Light
-            ActivateLight(greenLight);
-            yield return new WaitForSeconds(greenLightDuration);
-
-            // Yellow Light
-            ActivateLight(yellowLight);
-            yield return new WaitForSeconds(yellowLightDuration);
-
-            // Red Light
-            ActivateLight(redLight);
-            yield return new WaitForSeconds(redLightDuration);
-        }
+        ActivateRedLight(); // Default to red light
     }
 
-    private void ActivateLight(GameObject activeLight)
+    public void ActivateGreenLight()
     {
-        // Turn off all lights
+        SetAllLightsOff();
+        greenLight.SetActive(true);
+        CurrentState = SignalState.Green; // Update state
+        Debug.Log($"{gameObject.name}: Green Light ON, State = {CurrentState}");
+    }
+
+    public void ActivateYellowLight()
+    {
+        SetAllLightsOff();
+        yellowLight.SetActive(true);
+        CurrentState = SignalState.Yellow; // Update state
+        Debug.Log($"{gameObject.name}: Yellow Light ON, State = {CurrentState}");
+    }
+
+    public void ActivateRedLight()
+    {
+        SetAllLightsOff();
+        redLight.SetActive(true);
+        CurrentState = SignalState.Red; // Update state
+        Debug.Log($"{gameObject.name}: Red Light ON, State = {CurrentState}");
+    }
+
+    private void SetAllLightsOff()
+    {
         greenLight.SetActive(false);
         yellowLight.SetActive(false);
         redLight.SetActive(false);
-
-        // Turn on the active light
-        activeLight.SetActive(true);
     }
 }
