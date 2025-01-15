@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class TrafficLightController : MonoBehaviour
@@ -10,7 +11,8 @@ public class TrafficLightController : MonoBehaviour
     }
 
     public SignalState CurrentState { get; private set; } = SignalState.Red;
-
+    public CheckTrigger TriggerScript;
+    public bool LightHasStarted;
     public GameObject greenLight;
     public GameObject yellowLight;
     public GameObject redLight;
@@ -19,8 +21,18 @@ public class TrafficLightController : MonoBehaviour
 
     private void Start()
     {
+        LightHasStarted = false;
         ActivateRedLight(); // Default to red light
     }
+    private void Update()
+    {
+        if (TriggerScript.TriggerHit && LightHasStarted==false)
+        {
+            StartRedtoGreen();
+            LightHasStarted=true;
+        }
+    }
+
 
     public void ActivateGreenLight()
     {
@@ -52,4 +64,40 @@ public class TrafficLightController : MonoBehaviour
         yellowLight.SetActive(false);
         redLight.SetActive(false);
     }
+
+    public void StartRedtoGreen()
+    {
+        StartCoroutine(manageRedtoGreenLights());
+    }
+
+    public void StartGreentoRed()
+    {
+        StartCoroutine(manageGreentoRedLights());
+    }
+
+    private IEnumerator manageRedtoGreenLights()
+    {
+        ActivateRedLight();
+        yield return new WaitForSeconds(5.0f);
+        ActivateGreenLight();
+        yield return new WaitForSeconds(10.0f);
+        StartGreentoRed();
+    }
+
+
+
+    private IEnumerator manageGreentoRedLights()
+    {
+       
+        ActivateGreenLight();
+        yield return new WaitForSeconds(3.0f);
+        ActivateYellowLight();
+        yield return new WaitForSeconds(3.0f);
+        ActivateRedLight();
+        yield return new WaitForSeconds(5.0f);
+        StartRedtoGreen();
+
+    }
+
+
 }

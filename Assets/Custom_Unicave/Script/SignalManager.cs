@@ -18,7 +18,7 @@ public class SignalManager : MonoBehaviour
     {
         if (trafficSignals.Count > 0)
         {
-            StartCoroutine(ManageSignals());
+           StartCoroutine(ManageSignals());
         }
         else
         {
@@ -34,17 +34,21 @@ public class SignalManager : MonoBehaviour
             {
                 TrafficLightController currentController = trafficSignals[i].trafficLightController;
 
+               
+
+                // Transition to red light
+                currentController.ActivateRedLight();
+                yield return new WaitForSeconds(5.0f); // Small buffer before the next signal turns green
+
+
+
                 // Turn on the green light for the current signal
                 currentController.ActivateGreenLight();
-                yield return new WaitForSeconds(currentController.greenLightDuration);
+                yield return new WaitForSeconds(10.0f);
 
                 // Transition to yellow light
                 currentController.ActivateYellowLight();
                 yield return new WaitForSeconds(yellowLightDuration);
-
-                // Transition to red light
-                currentController.ActivateRedLight();
-                yield return new WaitForSeconds(1f); // Small buffer before the next signal turns green
             }
         }
     }
