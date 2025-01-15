@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckTrigger : MonoBehaviour
 {
+    public bool isPlayerTrigger;
     public bool TriggerHit;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class CheckTrigger : MonoBehaviour
         { if (!TriggerHit)
             TriggerHit = true;
         }
-        if (other.gameObject.tag == "Car")
+        if (other.gameObject.tag == "Car" && !isPlayerTrigger)
         {
            Destroy(other.gameObject);
         }

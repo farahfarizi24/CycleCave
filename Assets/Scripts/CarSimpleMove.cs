@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarSimpleMove : MonoBehaviour
 {
     public CheckTrigger startTrigger;
-    public CheckTrigger endTrigger;
+  //  public CheckTrigger endTrigger;
     public bool isGreenLight;
     public float speed = 5.0f;
     // Start is called before the first frame update
