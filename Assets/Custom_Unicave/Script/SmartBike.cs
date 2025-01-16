@@ -27,11 +27,13 @@ public class SmartBike : MonoBehaviour
     public bool brake;
 
     // brake control vairables
+    public float newSpeed;
     public float preSpeed;
     public bool brakeOverride;
-    // These constants need testing and adjustment
-    public const float KillSpeed = 2.0f;
-    public const float BrakingRate = 0.7f;
+    public const float ZeroSpeedThreshold = 1.5f;
+    public const float BrakingRate = 0.6f;
+    public const float CoastingRate = 0.7f;
+    public const float ReleaseGainRate = 0.4f; // lower values will make it less obvious though also less responsive for longer
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -109,13 +111,10 @@ public class SmartBike : MonoBehaviour
                     {
 
                         // Updating data
-                        speed = payload.speed;
+                        newSpeed = payload.speed;
                         cadence = payload.cadence;
                         brake = payload.brake;
-                        Debug.Log($"Updated speed: {speed}, updated cadence: {cadence}, updated brake: {brake}");
-
-                        // reduce speed if brake applied
-                        ApplyBrake();
+                        Debug.Log($"Updated speed: {newSpeed}, updated cadence: {cadence}, updated brake: {brake}");
 
                         logCounter++;
                         //Figure out how to connect the sessionID from lobby into here. 
@@ -150,43 +149,54 @@ public class SmartBike : MonoBehaviour
     }
 
     // block the read speed value and simulate braking if the brake was enabled and padelling has stopped
-    // ?maybe add gradually bring speed back up to prevent big jumps?
-    void ApplyBrake()
-    {
-
-        // start/end the brake block & simulation
-        if (brake == true)
-        {
+    void ApplyBrake() {
+        // start/end brake
+        if (brake == true) {
             brakeOverride = true;
-            Debug.Log("Brake Enabled");
+            //Debug.Log("Brake Enabled");
         }
-        else if (cadence > 0 && brakeOverride == true)
-        {
+        else if (brakeOverride == true && (cadence > 0 || newSpeed == 0)) {
             brakeOverride = false;
-            Debug.Log("Brake Disabled");
-            // gradually increase speed back up after brake release?
+            //Debug.Log("Brake Disabled");
         }
 
-        if (brakeOverride == false)
-        {
-            preSpeed = speed;
-            return;
+        // brake/catch up to measured speed
+        if (brakeOverride == true) {
+            if (brake == true) {
+                speed = preSpeed - (preSpeed * BrakingRate * Time.fixedDeltaTime);
+                Debug.Log("Hard braking");
+            }
+            else {
+                speed = preSpeed - (preSpeed * CoastingRate * Time.fixedDeltaTime);
+                Debug.Log("Coast braking");
+            }
+        }
+        else {
+            if (preSpeed < newSpeed) {
+                speed = preSpeed + ((newSpeed - preSpeed) * ReleaseGainRate * Time.fixedDeltaTime);
+                Debug.Log("Speed catching up");
+            }
+            else {
+                speed = newSpeed;
+                Debug.Log("Speed caught up");
+            }
         }
 
-        // slow down the speed at a proportional rate
-        speed = preSpeed * BrakingRate;
-        if (speed < KillSpeed)
-        {
+        // zero speed if below threshold
+        if ((speed < ZeroSpeedThreshold && newSpeed < ZeroSpeedThreshold) || (speed < ZeroSpeedThreshold && brakeOverride)) {
             speed = 0;
         }
+
         preSpeed = speed;
     }
 
-    //Moving the cameras along
-    void Update()
+    void FixedUpdate() 
     {
         if (isSessionActive == true)
         {
+
+            // FIXME: need to scale rates based on Time.deltaTime (I think?)
+            ApplyBrake();
 
             var step = Time.deltaTime * speed * 6.0f;
             CamScript.cameraMoveSpeed = speed;
@@ -194,7 +204,6 @@ public class SmartBike : MonoBehaviour
             //moving forward for now, according to value
             //transform.position += transform.forward * step;
         }
-
     }
 
     void SaveDataToFile(LogEntry log)
