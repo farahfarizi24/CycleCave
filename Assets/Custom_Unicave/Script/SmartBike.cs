@@ -198,7 +198,7 @@ public class SmartBike : MonoBehaviour
             // FIXME: need to scale rates based on Time.deltaTime (I think?)
             ApplyBrake();
 
-            var step = Time.deltaTime * speed * 6.0f;
+            var step = Time.deltaTime * speed * 5.0f;
             CamScript.cameraMoveSpeed = speed;
             CamScript.Move();
             //moving forward for now, according to value
