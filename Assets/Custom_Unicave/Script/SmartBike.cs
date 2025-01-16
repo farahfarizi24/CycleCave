@@ -31,9 +31,9 @@ public class SmartBike : MonoBehaviour
     public float preSpeed;
     public bool brakeOverride;
     public const float ZeroSpeedThreshold = 1.5f;
-    public const float BrakingRate = 0.6f;
-    public const float CoastingRate = 0.7f;
-    public const float ReleaseGainRate = 0.4f; // lower values will make it less obvious though also less responsive for longer
+    public const float BrakingRate = 0.7f;
+    public const float CoastingRate = 0.55f;
+    public const float ReleaseGainRate = 0.5f; // lower values will make it less obvious though also less responsive for longer
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
