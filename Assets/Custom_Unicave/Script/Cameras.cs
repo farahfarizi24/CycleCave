@@ -20,7 +20,6 @@ public class Cameras : MonoBehaviourPunCallbacks
     Quaternion start_rot;
 
     // Timer variables
-    private float timerDuration = 120f; // 2 minutes in seconds
     private float timer;
 
     private void Awake()

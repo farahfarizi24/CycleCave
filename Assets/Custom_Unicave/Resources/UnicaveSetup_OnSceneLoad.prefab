@@ -363,6 +363,7 @@ MonoBehaviour:
   brake: 0
   newSpeed: 0
   preSpeed: 0
+  preMeasuredSpeed: 0
   brakeOverride: 0
   isSessionActive: 0
 --- !u!1 &5174915880624121940
@@ -670,8 +671,8 @@ Transform:
   m_GameObject: {fileID: 8563256891774759468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7356573, z: 0, w: 0.6773539}
-  m_LocalPosition: {x: -0, y: -1.7, z: -0.28}
-  m_LocalScale: {x: 1, y: 3.3, z: 0.7}
+  m_LocalPosition: {x: -0, y: -0.25, z: -0.28}
+  m_LocalScale: {x: 1, y: 1.68, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 736078297377335787}
@@ -769,7 +770,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 4
