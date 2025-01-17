@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f141628068b9b4493f69f797f003b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoPlayAnimations: 1
+  AutoPlayAnimations: 0
   PaletteOverride: {fileID: 0}
 --- !u!1 &7372501814652593214
 GameObject:

@@ -2173,6 +2173,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
       value: 100
       objectReference: {fileID: 0}
@@ -3788,6 +3792,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: stopLine
       value: 
       objectReference: {fileID: 209798978}
@@ -4079,6 +4087,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: stopLine
       value: 
@@ -4465,6 +4477,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
       value: 100
       objectReference: {fileID: 0}
@@ -4705,6 +4721,10 @@ PrefabInstance:
     - target: {fileID: 1777052702894163178, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: detectionRange
@@ -5622,6 +5642,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
@@ -6005,6 +6029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: stopLine
       value: 
@@ -7294,6 +7322,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
       value: 100
       objectReference: {fileID: 0}
@@ -8155,6 +8187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 474984950}
     m_Modifications:
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
       value: 100
