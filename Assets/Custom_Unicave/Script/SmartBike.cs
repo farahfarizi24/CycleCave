@@ -29,11 +29,12 @@ public class SmartBike : MonoBehaviour
     // brake control vairables
     public float newSpeed;
     public float preSpeed;
+    public float preMeasuredSpeed;
     public bool brakeOverride;
     public const float ZeroSpeedThreshold = 1.5f;
     public const float BrakingRate = 0.7f;
-    public const float CoastingRate = 0.55f;
-    public const float ReleaseGainRate = 0.5f; // lower values will make it less obvious though also less responsive for longer
+    public const float CoastingRate = 0.6f;
+    public const float ReleaseGainRate = 0.7f; // lower values will make it less obvious though also less responsive for longer
 
     //Data collection with unique ID 
     private List<LogEntry> dataLog = new List<LogEntry>();
@@ -155,7 +156,8 @@ public class SmartBike : MonoBehaviour
             brakeOverride = true;
             //Debug.Log("Brake Enabled");
         }
-        else if (brakeOverride == true && (cadence > 0 || newSpeed == 0)) {
+        // turn off brake if pedalling or at 0 speed
+        else if (brakeOverride == true && (cadence > 0 || newSpeed == 0 || newSpeed - preMeasuredSpeed > 1 )) {
             brakeOverride = false;
             //Debug.Log("Brake Disabled");
         }
@@ -188,6 +190,7 @@ public class SmartBike : MonoBehaviour
         }
 
         preSpeed = speed;
+        preMeasuredSpeed = newSpeed;
     }
 
     void FixedUpdate() 
@@ -198,7 +201,7 @@ public class SmartBike : MonoBehaviour
             // FIXME: need to scale rates based on Time.deltaTime (I think?)
             ApplyBrake();
 
-            var step = Time.deltaTime * speed * 5.0f;
+            var step = Time.deltaTime * speed * 3.5f;
             CamScript.cameraMoveSpeed = speed;
             CamScript.Move();
             //moving forward for now, according to value
