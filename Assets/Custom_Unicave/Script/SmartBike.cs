@@ -20,7 +20,7 @@ public class SmartBike : MonoBehaviour
     private int serverPort = 5005; //Match Python's Server port
     //private int serverPort = 1567;
     private bool isReceiving = true;
-
+    public Manager SceneManager;
     //Data variables
     public float speed;
     public float cadence;
@@ -53,6 +53,7 @@ public class SmartBike : MonoBehaviour
         CamScript = GetComponent<Cameras>();
         StartLogging();
         setSessionActive(true);
+        SceneManager = GameObject.FindGameObjectWithTag("ManagerTag").GetComponent<Manager>();
     }
 
     void Start()
@@ -203,7 +204,11 @@ public class SmartBike : MonoBehaviour
 
             var step = Time.deltaTime * speed * 3.5f;
             CamScript.cameraMoveSpeed = speed;
-            CamScript.Move();
+            if (!SceneManager.movementDisabled)
+            {
+                CamScript.Move();
+
+            }
             //moving forward for now, according to value
             //transform.position += transform.forward * step;
         }

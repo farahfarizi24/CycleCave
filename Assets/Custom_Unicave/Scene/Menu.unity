@@ -5241,7 +5241,7 @@ GameObject:
   - component: {fileID: 653870714}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: ManagerTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5296,7 +5296,7 @@ MonoBehaviour:
   animator_fading: {fileID: 2099424360366906727}
   currentScreen: 0
   sessionid: 
-  cameraCount: 5
+  cameraCount: 1
   availableScenes: 02000000030000000400000005000000
   movementDisabled: 0
 --- !u!4 &653870716

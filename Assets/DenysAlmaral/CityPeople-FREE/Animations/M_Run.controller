@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jog
+  m_Name: M_Run
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -94,7 +94,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 28b3643b89fce134d8983d5b7a91d0fc, type: 2}
+  m_Motion: {fileID: 7400000, guid: f262f310888be4947ae3e01a7b6e0b45, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

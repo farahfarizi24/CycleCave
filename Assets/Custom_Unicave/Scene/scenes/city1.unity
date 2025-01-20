@@ -5572,7 +5572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 47865840}
   isGreenLight: 0
-  speed: 30
+  speed: 20
 --- !u!114 &864658092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13830,7 +13830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1163291861}
   isGreenLight: 0
-  speed: 5
+  speed: 3
 --- !u!1001 &1745006896
 PrefabInstance:
   m_ObjectHideFlags: 0

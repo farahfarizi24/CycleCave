@@ -57,7 +57,7 @@ public class MoveWhenPlayerNearAndDestroy : MonoBehaviour
         // Activate the walking animation
         if (animator != null)
         {
-            animator.SetBool("isWalking", true);
+            //animator.SetBool("isWalking", true);
         }
 
         Debug.Log("Player is near, object starts moving.");

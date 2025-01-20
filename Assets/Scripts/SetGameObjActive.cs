@@ -17,7 +17,7 @@ public class SetGameObjActive : MonoBehaviour
     {
         if (trigger.TriggerHit)
         {
-            if (GOList.Length > 0) {
+            if (GOList.Length >= 1) {
 
                 for (int i = 0; i < GOList.Length; i++)
                 {
@@ -25,7 +25,8 @@ public class SetGameObjActive : MonoBehaviour
                 }
               
                 
-                   Array.Clear(GOList, 0, GOList.Length);
+                Array.Clear(GOList, 0, GOList.Length);
+                GOList = null;
                 
             }
            
