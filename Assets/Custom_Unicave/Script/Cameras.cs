@@ -89,8 +89,7 @@ public class Cameras : MonoBehaviourPunCallbacks
 
     private void MoveAlongPath()
     {
-        if (!Manager.instance.movementDisabled)
-        {
+       
             if (currentWaypointIndex < waypoints.Length)
             {
                 Vector3 targetPosition = waypoints[currentWaypointIndex].position;
@@ -125,7 +124,7 @@ public class Cameras : MonoBehaviourPunCallbacks
                     }
                 }
             }
-        }
+        
 
 
     }

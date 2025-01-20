@@ -3235,7 +3235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1429059664}
   isGreenLight: 0
-  speed: 15
+  speed: 20
 --- !u!1 &340088646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,7 +5070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3834373095762818041, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5115,6 +5115,10 @@ PrefabInstance:
     - target: {fileID: 3834373095763064927, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_Name
       value: TRAFFIC Car 001 Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834373095763064927, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3834373095765113139, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7557,6 +7561,7 @@ MonoBehaviour:
   - {fileID: 337259873}
   - {fileID: 1317682477}
   - {fileID: 673434471}
+  ObjectsAreOn: 0
 --- !u!114 &763828638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9692,7 +9697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1586215114}
   isGreenLight: 0
-  speed: 10
+  speed: 18
 --- !u!1 &1002841268
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,7 +13149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1586215114}
   isGreenLight: 0
-  speed: 10
+  speed: 18
 --- !u!1001 &1373262042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13292,7 +13297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1429059664}
   isGreenLight: 0
-  speed: 16
+  speed: 20
 --- !u!1 &1386826206
 GameObject:
   m_ObjectHideFlags: 0
@@ -13546,7 +13551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 742236890}
   isGreenLight: 0
-  speed: 15
+  speed: 18
 --- !u!1 &1421337808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6993270559495516286, guid: 314b13a2c4f89c74299eabc2a4c725c7, type: 3}
@@ -13621,6 +13626,7 @@ MonoBehaviour:
   GOList:
   - {fileID: 1373262044}
   - {fileID: 339973153}
+  ObjectsAreOn: 0
 --- !u!65 &1429059666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18507,7 +18513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: detectionRange
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3834373095762818041, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,7 +20,8 @@ public class IfCarHitsPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+            
         }
     }
 }
