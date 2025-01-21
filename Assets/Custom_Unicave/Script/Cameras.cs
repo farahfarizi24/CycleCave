@@ -89,7 +89,9 @@ public class Cameras : MonoBehaviourPunCallbacks
 
     private void MoveAlongPath()
     {
-       
+        if (!Manager.instance.movementDisabled)
+        {
+
             if (currentWaypointIndex < waypoints.Length)
             {
                 Vector3 targetPosition = waypoints[currentWaypointIndex].position;
@@ -124,12 +126,12 @@ public class Cameras : MonoBehaviourPunCallbacks
                     }
                 }
             }
-        
+        }
 
 
     }
 
-    public void Reset()
+    public void ResetCamera()
     {
         // Reset waypoint index
         currentWaypointIndex = 0;
@@ -146,6 +148,7 @@ public class Cameras : MonoBehaviourPunCallbacks
         // Reset camera position and rotation
         transform.position = waypoints[0].position;
         transform.rotation = waypoints[0].rotation;
+
 
         // Reset the timer
         ResetTimer();

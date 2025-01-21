@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Device;
+using Application = UnityEngine.Application;
+
 
 public class Manager : MonoBehaviourPunCallbacks
 {
@@ -202,8 +204,9 @@ public class Manager : MonoBehaviourPunCallbacks
             yield return new WaitForSeconds(1f);
         PhotonNetwork.LoadLevel(scene);
         yield return new WaitForSeconds(5f);
-        FindAnyObjectByType<Cameras>()?.Reset();
         animator_fading.Play("Fade_in");
+
+        FindAnyObjectByType<Cameras>()?.ResetCamera();
         movementDisabled = false;
     }
     [PunRPC]
@@ -218,6 +221,8 @@ public class Manager : MonoBehaviourPunCallbacks
     private IEnumerator ResetGame()
     {
         yield return new WaitForSeconds(5f);
+
+        Application.Quit();
         if (PhotonNetwork.IsMasterClient)
         {
             GenerateSceneOrder();
