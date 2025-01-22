@@ -12,8 +12,8 @@ public class CheckIfCarHitsAnother : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MoveScript = this.gameObject.GetComponent<CarMovement>();
-        SecondSensor = this.gameObject.GetComponentInChildren<SecondSensorIncar>(); 
+      //  MoveScript = this.gameObject.GetComponent<CarMovement>();
+      //  SecondSensor = this.gameObject.GetComponentInChildren<SecondSensorIncar>(); 
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CheckIfCarHitsAnother : MonoBehaviour
     {
         
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Car")
@@ -74,6 +74,6 @@ public class CheckIfCarHitsAnother : MonoBehaviour
         }
 
 
-    }
+    }*/
 
 }
