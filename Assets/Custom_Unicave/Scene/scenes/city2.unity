@@ -491,6 +491,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
@@ -5895,7 +5899,7 @@ MonoBehaviour:
   - {fileID: 1066586498}
   - {fileID: 1641868165}
   - {fileID: 1011507630}
-  speed: 12
+  speed: 10
   moveOnRoute: 1
   trigger: {fileID: 2122839286}
 --- !u!1 &474984949
@@ -6707,7 +6711,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3834373095762818041, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11959,7 +11963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: speed
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: stopLine
@@ -12233,6 +12237,10 @@ PrefabInstance:
       propertyPath: trafficSignal
       value: 
       objectReference: {fileID: 145610002}
+    - target: {fileID: 2843189887462927983, guid: cfa39b2282177894b8700b34c302536f, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3834373095762818041, guid: cfa39b2282177894b8700b34c302536f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -166.88385
@@ -12597,6 +12605,10 @@ PrefabInstance:
     - target: {fileID: 1784398447369880136, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: detectionRange
@@ -15161,7 +15173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: speed
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: detectionRange
@@ -15603,7 +15615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: speed
-      value: 20
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18424,7 +18436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 549906596}
   isGreenLight: 0
-  speed: 6
+  speed: 3
 --- !u!1 &1356970524
 GameObject:
   m_ObjectHideFlags: 0
@@ -19074,7 +19086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: speed
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: stopLine
@@ -21265,7 +21277,7 @@ MonoBehaviour:
   - {fileID: 1066586498}
   - {fileID: 1641868165}
   - {fileID: 1011507630}
-  speed: 12
+  speed: 10
   moveOnRoute: 1
   trigger: {fileID: 2122839286}
 --- !u!1001 &1582466497
@@ -24681,11 +24693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440530, guid: 3bfdd3a6c1f0057488731495e25103e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.71378
+      value: 57.71
       objectReference: {fileID: 0}
     - target: {fileID: 440530, guid: 3bfdd3a6c1f0057488731495e25103e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.305016
+      value: 57.39
       objectReference: {fileID: 0}
     - target: {fileID: 440530, guid: 3bfdd3a6c1f0057488731495e25103e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27846,7 +27858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: speed
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7991980407807562943, guid: 67cdca82583be3a428e805896adf4931, type: 3}
       propertyPath: detectionRange
@@ -28284,6 +28296,10 @@ PrefabInstance:
     - target: {fileID: 1777052702894163178, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
+      propertyPath: speed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3797052086255691874, guid: cd4b4120054afdf49aa6c6a624737485, type: 3}
       propertyPath: detectionRange
