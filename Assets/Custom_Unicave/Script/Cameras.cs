@@ -34,7 +34,7 @@ public class Cameras : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             UpdateTimer();
-            Move();
+           // Move();
         }
     }
 
@@ -92,9 +92,10 @@ public class Cameras : MonoBehaviourPunCallbacks
         if (!Manager.instance.movementDisabled)
         {
 
-            if (currentWaypointIndex <= waypoints.Length-1 && waypoints[currentWaypointIndex].position!=null)
+            if ( waypoints[currentWaypointIndex].position!=null && currentWaypointIndex <= waypoints.Length - 1 && transform.position!=null)
             {
                 Vector3 targetPosition =  waypoints[currentWaypointIndex].position;
+
 
                 transform.position = Vector3.MoveTowards(
                     transform.position,
