@@ -186,7 +186,7 @@ public class SmartBike : MonoBehaviour
         }
 
         // zero speed if below threshold
-        if ((speed < ZeroSpeedThreshold && newSpeed < ZeroSpeedThreshold) || (speed < ZeroSpeedThreshold && brakeOverride)) {
+        if ((speed < ZeroSpeedThreshold && newSpeed < ZeroSpeedThreshold) || (speed < ZeroSpeedThreshold && brakeOverride && cadence == 0)) {
             speed = 0;
         }
 
