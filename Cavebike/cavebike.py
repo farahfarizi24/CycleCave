@@ -45,7 +45,8 @@ PORT = 5005
 KICKR_ADDRESS = 'd2:83:84:53:44:47'
 FTMS_UUID = 0x1826
 INDOOR_BIKE_DATA_UUID = 0x2AD2
-BRAKE_PIN = 37
+BRAKE_PIN = 31
+MAGNETIC_BRAKE_PIN = 37
 
 # data variables
 speed = 0.0
@@ -152,11 +153,12 @@ class Cavebike(gatt.Device):
 
 class BrakeButton:
 
-    def __init__(self, sock: socket.socket, pin: int = BRAKE_PIN):
+    def __init__(self, sock: socket.socket, pin: int = BRAKE_PIN, invert: bool = False):
 
         # setup pin
         self._pin = pin
         self._state = False
+        self._invert = invert
         GPIO.setup(self._pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         GPIO.add_event_detect(self._pin, GPIO.BOTH, callback=self.state_change, bouncetime=75)
 
@@ -169,6 +171,7 @@ class BrakeButton:
         global speed, cadence, power, brake
         
         self._state = bool(GPIO.input(self._pin))
+        if self._invert: self._state = not self._state
         brake = self._state
 
         # send data over UDP
@@ -181,7 +184,7 @@ class BrakeButton:
             'brake' : brake
         })
         self.sock.sendto(data.encode(), (IP, PORT))
-        logger.debug(data)
+        logger.info(data)
 
 def main():
 
@@ -191,7 +194,8 @@ def main():
 
     # initialise brake button
     GPIO.setmode(GPIO.BOARD)
-    brake_button = BrakeButton(sock)
+    brake_button = BrakeButton(sock,pin=BRAKE_PIN)
+    magnetic_brake = BrakeButton(sock,pin=MAGNETIC_BRAKE_PIN,invert=False)
 
     # initialise the device manager
     manager = gatt.DeviceManager(adapter_name='hci0')
