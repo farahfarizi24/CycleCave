@@ -1,6 +1,6 @@
 # Cycle Cave
 
-a Virtual Reality (VR) Cave project that integrates a Cave system with an IoT bike.
+a virtual reality (VR) room-scale cave project that integrates a cave system with an IoT bike.
 
 ![Cycle cave set up image](Assets/ZqApRFHg.jpg)
 
