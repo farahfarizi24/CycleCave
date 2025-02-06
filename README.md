@@ -8,13 +8,13 @@ a virtual reality (VR) room-scale cave project that integrates a cave system wit
 
 * **The Cave system** utilises five projectors covering the front, left, right, floor, and roof. Each projector is connected to an individual PC running the Cycle Cave application.
 
-* The **IoT bike** includes a braking system but no manual turning; turns are generated automatically within the virtual environment. Users follow a pre-defined route as they cycle.
+* The **IoT bike** includes a braking system but no manual turning; turns are generated automatically within the virtual environment. Users follow a pre-defined route as they cycle. The bike is connected to the main PC via Bluetooth. 
 
 * Non-playable object movement is triggered with position radius and trigger collider objects
   
 ## Getting Started
 * **Internet connection required**: The IoT bike transmits movement data to the application, which calculates real-time bike movement in the virtual environment. Other PCs running the application receive this data and synchronize movement accordingly.
-* **Data Collection**: The system collects internal data, including user ID, speed, cadence, and time.
+* **Data Collection**: The system collects internal data, including user ID, speed, cadence, and time. Data is stored in the same folder as the executable file per session, only the PC being connected to the bike will have speed data stored within their data files. Naming convention follows the following format: bikeDataLog_(userID)_(YearMonthDate)_(HourMinuteSeconds). 
 * This repository uses GitLFS to store big data
   
 ### Scenes
