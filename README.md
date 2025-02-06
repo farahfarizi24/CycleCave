@@ -49,7 +49,7 @@ There are five scenes—one practice scene and four randomized cycling environme
   
 ## Authors
 * Farah Farizi - https://github.com/farahfarizi24 / farahdfarizi@gmail.com
-* Ethan Byrne-Staunton- https://github.com/KasparByrne
 * Sanjay Selvaraj - sanjayspostbox@outlook.com
+* Ethan Byrne-Staunton- https://github.com/KasparByrne
 * Delia Chia Hui Kok - https://github.com/D3lK1ch1
 
